@@ -1,0 +1,492 @@
+{
+    "mode": "production",
+    "bail": true,
+    "devtool": "source-map",
+    "entry": [
+        "D:\\rcnext\\node_modules\\react-scripts\\config\\polyfills.js",
+        "D:\\rcnext\\src\\index.js"
+    ],
+    "output": {
+        "path": "D:\\rcnext\\build",
+        "filename": "static/js/[name].[chunkhash:8].js",
+        "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",
+        "publicPath": "/"
+    },
+    "optimization": {
+        "minimizer": [
+            {
+                "options": {
+                    "test": "/\\.js(\\?.*)?$/i",
+                    "extractComments": false,
+                    "sourceMap": true,
+                    "cache": true,
+                    "parallel": true,
+                    "uglifyOptions": {
+                        "output": {
+                            "ecma": 5,
+                            "comments": false,
+                            "ascii_only": true
+                        },
+                        "parse": {
+                            "ecma": 8
+                        },
+                        "compress": {
+                            "ecma": 5,
+                            "warnings": false,
+                            "comparisons": false
+                        },
+                        "mangle": {
+                            "safari10": true
+                        }
+                    }
+                },
+                "sourceMapsCache": {}
+            },
+            {
+                "pluginDescriptor": {
+                    "name": "OptimizeCssAssetsWebpackPlugin"
+                },
+                "options": {
+                    "assetProcessors": [
+                        {
+                            "phase": "compilation.optimize-chunk-assets",
+                            "regExp": "/\\.css$/g"
+                        }
+                    ],
+                    "assetNameRegExp": "/\\.css$/g",
+                    "cssProcessorOptions": {
+                        "safe": true
+                    }
+                },
+                "phaseAssetProcessors": {
+                    "compilation.optimize-chunk-assets": [
+                        {
+                            "phase": "compilation.optimize-chunk-assets",
+                            "regExp": "/\\.css$/g"
+                        }
+                    ],
+                    "compilation.optimize-assets": [],
+                    "emit": []
+                },
+                "deleteAssetsMap": {}
+            }
+        ],
+        "splitChunks": {
+            "chunks": "all",
+            "name": "vendors"
+        },
+        "runtimeChunk": true
+    },
+    "resolve": {
+        "modules": [
+            "node_modules",
+            "D:\\rcnext\\src"
+        ],
+        "extensions": [
+            ".web.js",
+            ".mjs",
+            ".js",
+            ".json",
+            ".web.jsx",
+            ".jsx"
+        ],
+        "alias": {
+            "@babel/runtime": "D:\\rcnext\\node_modules\\@babel\\runtime",
+            "react-native": "react-native-web"
+        },
+        "plugins": [
+            {
+                "appSrcs": [
+                    "D:\\rcnext\\src"
+                ],
+                "allowedFiles": {}
+            }
+        ]
+    },
+    "module": {
+        "strictExportPresence": true,
+        "rules": [
+            {
+                "parser": {
+                    "requireEnsure": false
+                }
+            },
+            {
+                "test": "/\\.(js|jsx|mjs)$/",
+                "enforce": "pre",
+                "use": [
+                    {
+                        "options": {
+                            "eslintPath": "D:\\rcnext\\node_modules\\eslint\\lib\\api.js",
+                            "baseConfig": {
+                                "extends": [
+                                    "D:\\rcnext\\node_modules\\eslint-config-react-app\\index.js"
+                                ]
+                            },
+                            "ignore": false,
+                            "useEslintrc": false
+                        },
+                        "loader": "D:\\rcnext\\node_modules\\eslint-loader\\index.js"
+                    }
+                ],
+                "include": [
+                    "D:\\rcnext\\src"
+                ],
+                "exclude": [
+                    "/[\\/\\\\\\\\]node_modules[\\/\\\\\\\\]/"
+                ]
+            },
+            {
+                "oneOf": [
+                    {
+                        "test": "/\\.module.less$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 1,
+                                    "sourceMap": true,
+                                    "modules": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "less-loader",
+                                "options": {
+                                    "javascriptEnabled": true,
+                                    "modifyVars": {
+                                        "@primary-color": "red",
+                                        "@sss-color": "blue"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.less$/",
+                        "exclude": "/\\.module.less$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 1,
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "less-loader",
+                                "options": {
+                                    "javascriptEnabled": true,
+                                    "modifyVars": {
+                                        "@primary-color": "red",
+                                        "@sss-color": "blue"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": [
+                            "/\\.bmp$/",
+                            "/\\.gif$/",
+                            "/\\.jpe?g$/",
+                            "/\\.png$/"
+                        ],
+                        "loader": "D:\\rcnext\\node_modules\\url-loader\\dist\\cjs.js",
+                        "options": {
+                            "limit": 10000,
+                            "name": "static/media/[name].[hash:8].[ext]"
+                        }
+                    },
+                    {
+                        "test": "/\\.(js|jsx|mjs)$/",
+                        "include": [
+                            "D:\\rcnext\\src"
+                        ],
+                        "exclude": [
+                            "/[\\/\\\\\\\\]node_modules[\\/\\\\\\\\]/"
+                        ],
+                        "use": [
+                            "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
+                                "options": {
+                                    "babelrc": false,
+                                    "presets": [
+                                        "D:\\rcnext\\node_modules\\babel-preset-react-app\\index.js"
+                                    ],
+                                    "plugins": [
+                                        [
+                                            "import",
+                                            {
+                                                "libraryName": "antd",
+                                                "libraryDirectory": "es",
+                                                "style": true
+                                            }
+                                        ],
+                                        [
+                                            "lodash",
+                                            {}
+                                        ],
+                                        [
+                                            "D:\\rcnext\\node_modules\\babel-plugin-named-asset-import\\index.js",
+                                            {
+                                                "loaderMap": {
+                                                    "svg": {
+                                                        "ReactComponent": "svgr/webpack![path]"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    ],
+                                    "compact": true,
+                                    "highlightCode": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.js$/",
+                        "use": [
+                            "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
+                                "options": {
+                                    "babelrc": false,
+                                    "compact": false,
+                                    "presets": [
+                                        "D:\\rcnext\\node_modules\\babel-preset-react-app\\dependencies.js"
+                                    ],
+                                    "cacheDirectory": true,
+                                    "highlightCode": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.css$/",
+                        "exclude": "/\\.module\\.css$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 1,
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.module\\.css$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 1,
+                                    "sourceMap": true,
+                                    "modules": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.(scss|sass)$/",
+                        "exclude": "/\\.module\\.(scss|sass)$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 2,
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.module\\.(scss|sass)$/",
+                        "loader": [
+                            "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 2,
+                                    "sourceMap": true,
+                                    "modules": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": true
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
+                                "options": {
+                                    "sourceMap": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "test": "/\\.(graphql)$/",
+                        "loader": "graphql-tag/loader"
+                    },
+                    {
+                        "loader": "D:\\rcnext\\node_modules\\file-loader\\dist\\cjs.js",
+                        "exclude": [
+                            "/\\.(js|jsx|mjs)$/",
+                            "/\\.html$/",
+                            "/\\.json$/",
+                            "/\\.less$/"
+                        ],
+                        "options": {
+                            "name": "static/media/[name].[hash:8].[ext]"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "plugins": [
+        {
+            "options": {
+                "template": "D:\\rcnext\\public\\index.html",
+                "filename": "index.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": {
+                    "removeComments": true,
+                    "collapseWhitespace": true,
+                    "removeRedundantAttributes": true,
+                    "useShortDoctype": true,
+                    "removeEmptyAttributes": true,
+                    "removeStyleLinkTypeAttributes": true,
+                    "keepClosingSlash": true,
+                    "minifyJS": true,
+                    "minifyCSS": true,
+                    "minifyURLs": true
+                },
+                "cache": true,
+                "showErrors": true,
+                "chunks": "all",
+                "excludeChunks": [],
+                "chunksSortMode": "auto",
+                "meta": {},
+                "title": "Webpack App",
+                "xhtml": false
+            }
+        },
+        {
+            "replacements": {
+                "NODE_ENV": "production",
+                "PUBLIC_URL": ""
+            }
+        },
+        {
+            "definitions": {
+                "process.env": {
+                    "NODE_ENV": "\"production\"",
+                    "PUBLIC_URL": "\"\""
+                }
+            }
+        },
+        {
+            "options": {
+                "filename": "static/css/[name].[contenthash:8].css",
+                "chunkFilename": "static/css/[name].[contenthash:8].chunk.css"
+            }
+        },
+        {
+            "opts": {
+                "publicPath": "/",
+                "basePath": "",
+                "fileName": "asset-manifest.json",
+                "transformExtensions": "/^(gz|map)$/i",
+                "writeToFileEmit": false,
+                "seed": null,
+                "filter": null,
+                "map": null,
+                "generate": null,
+                "sort": null
+            }
+        },
+        {
+            "config": {},
+            "options": {
+                "cacheId": "sw-precache-webpack-plugin",
+                "filename": "service-worker.js",
+                "importScripts": [],
+                "staticFileGlobsIgnorePatterns": [
+                    "/\\.map$/",
+                    "/asset-manifest\\.json$/"
+                ],
+                "mergeStaticsConfig": false,
+                "minify": true,
+                "dontCacheBustUrlsMatching": "/\\.\\w{8}\\./"
+            },
+            "overrides": {},
+            "warnings": []
+        },
+        {
+            "resourceRegExp": "/^\\.\\/locale$/",
+            "contextRegExp": "/moment$/"
+        }
+    ],
+    "node": {
+        "dgram": "empty",
+        "fs": "empty",
+        "net": "empty",
+        "tls": "empty",
+        "child_process": "empty"
+    },
+    "performance": false
+}

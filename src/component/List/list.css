@@ -1,0 +1,53 @@
+/* //当你点击了hello节点的时候，那么该元素将会被移除，它会首先被添加example-leave,
+  //然后添加example-leave-active这个class */
+/* .example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.example-leave {
+    opacity: 1;
+}
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+.example-appear {
+    opacity: 0.01;
+}
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+} */
+.example-enter {
+    transform: translateX(350px);
+}
+
+.example-enter.example-enter-active {
+    transform: translateX(0px);
+    transition: transform 500ms ease-in;
+}
+.example-leave {
+    transform: translateX(0px);
+}
+.example-leave.example-leave-active {
+    transform: translateX(350px);
+    transition: transform 300ms ease-in;
+}
+.example-appear {
+    opacity: 0.01;
+}
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.divs{
+    display: flex;
+    flex-direction: row;
+    will-change: margin-left;
+    transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
