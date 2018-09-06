@@ -6,7 +6,7 @@ import count from './count';
 const customDevtoolOptions = { disabled: false };
 
 const store = init({
-    name:'init',
+    name: 'init',
     models: { count },
     redux: {
         devtoolOptions: customDevtoolOptions
