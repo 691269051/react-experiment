@@ -9,6 +9,7 @@
         "@rematch/core": "^1.0.0-beta.4",
         "antd": "^3.9.0",
         "anujs": "^1.4.6",
+        "babel-core": "^7.0.0-0",
         "classname": "^0.0.0",
         "immer": "^1.5.0",
         "less": "3.8.1",
