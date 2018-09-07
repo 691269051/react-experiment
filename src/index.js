@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from './controller';
 import './index.css';
