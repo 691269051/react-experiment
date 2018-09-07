@@ -1,5 +1,7 @@
 import Loadable from 'react-loadable';
 import Loading from '../component/loading';
+import { hot } from 'react-hot-loader';
+
 import React from 'react';
 import { Router } from '@reach/router';
 
@@ -38,4 +40,4 @@ const Routers = () => {
         </Router>
     );
 };
-export default Routers;
+export default hot(module)(Routers);

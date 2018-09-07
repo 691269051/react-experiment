@@ -56,7 +56,8 @@
                                 ]
                             },
                             "ignore": false,
-                            "useEslintrc": false
+                            "useEslintrc": false,
+                            "emitWarning": true
                         },
                         "loader": "D:\\rcnext\\node_modules\\eslint-loader\\index.js"
                     }
@@ -161,16 +162,19 @@
                                     ],
                                     "plugins": [
                                         [
+                                            "react-hot-loader/babel"
+                                        ],
+                                        [
+                                            "lodash",
+                                            {}
+                                        ],
+                                        [
                                             "import",
                                             {
                                                 "libraryName": "antd",
                                                 "libraryDirectory": "es",
                                                 "style": true
                                             }
-                                        ],
-                                        [
-                                            "lodash",
-                                            {}
                                         ],
                                         [
                                             "D:\\rcnext\\node_modules\\babel-plugin-named-asset-import\\index.js",

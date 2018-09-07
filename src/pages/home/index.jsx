@@ -39,6 +39,7 @@ class Home extends PureComponent {
         // console.log(this.props.location.state);
         return (
             <div className={styles.ddd}>
+                <div style={{color:'red'}}>dddd1234</div>
                 <h1>{count}</h1>
                 {/* <h2>{num}</h2> */}
                 {/* <Link to="api" replace> */}
@@ -50,13 +51,12 @@ class Home extends PureComponent {
                     加1
                 </Button>
                 <H1 num={count}>實驗1</H1>
-                <div>1234</div>
                 {this.props.children}
                 <RanderProps>
                     {(state, props, setState) => {
                         this._setState = setState;
                         this._state = state;
-                        return <pre className={styles.show}><a download='' href='http://localhost:3000/static/js/home.chunk.js'>下载</a>{state.index}</pre>;
+                        return <div className={styles.show}>RanderProps {state.index}</div>;
                     }}
                 </RanderProps>
             </div>

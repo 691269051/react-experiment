@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-import './index.css';
-import App from './routers';
 import store from './controller';
+import './index.css';
 import registerServiceWorker from './registerServiceWorker';
+import App from './routers';
 
 ReactDOM.render(
     <Provider store={store}>
@@ -13,8 +14,8 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-if (module.hot) {
-    module.hot.accept();
-}
+// if (module.hot) {
+//     module.hot.accept();
+// }
 
 registerServiceWorker();
