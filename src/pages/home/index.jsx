@@ -25,17 +25,11 @@ class Home extends PureComponent {
         //         draft.num += 1;
         //     })
         // );
-        console.log(this._state)
+        // console.log(this._state)
         this._setState&&this._setState.setState(produce(draft => ({
             index:draft.index+1
         })))
     };
-
-    renderZi = (state, props, setState) => {
-        this._setState = setState;
-        this._state = state;
-        return <pre className={styles.show}><a download='' href='http://localhost:3000/static/js/home.chunk.js'>下载</a>{state.index}</pre>;
-    }
 
     _setState = null;
 
@@ -45,7 +39,6 @@ class Home extends PureComponent {
         // console.log(this.props.location.state);
         return (
             <div className={styles.ddd}>
-                <div style={{color:'red'}}>123456</div>
                 <h1>{count}</h1>
                 {/* <h2>{num}</h2> */}
                 {/* <Link to="api" replace> */}
@@ -57,9 +50,14 @@ class Home extends PureComponent {
                     加1
                 </Button>
                 <H1 num={count}>實驗1</H1>
+                <div>1234</div>
                 {this.props.children}
                 <RanderProps>
-                    {this.renderZi}
+                    {(state, props, setState) => {
+                        this._setState = setState;
+                        this._state = state;
+                        return <pre className={styles.show}><a download='' href='http://localhost:3000/static/js/home.chunk.js'>下载</a>{state.index}</pre>;
+                    }}
                 </RanderProps>
             </div>
         );
