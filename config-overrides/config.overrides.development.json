@@ -1,5 +1,4 @@
 {
-    "mode": "development",
     "devtool": "cheap-module-source-map",
     "entry": [
         "D:\\rcnext\\node_modules\\react-scripts\\config\\polyfills.js",
@@ -11,13 +10,6 @@
         "filename": "static/js/bundle.js",
         "chunkFilename": "static/js/[name].chunk.js",
         "publicPath": "/"
-    },
-    "optimization": {
-        "splitChunks": {
-            "chunks": "all",
-            "name": "vendors"
-        },
-        "runtimeChunk": true
     },
     "resolve": {
         "modules": [
@@ -38,9 +30,7 @@
         },
         "plugins": [
             {
-                "appSrcs": [
-                    "D:\\rcnext\\src"
-                ],
+                "appSrc": "D:\\rcnext\\src",
                 "allowedFiles": {}
             }
         ]
@@ -88,7 +78,8 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "modules": true
+                                    "modules": true,
+                                    "localIdentName": "[path]__[name]___[local]"
                                 }
                             },
                             {
@@ -145,7 +136,7 @@
                             "/\\.jpe?g$/",
                             "/\\.png$/"
                         ],
-                        "loader": "D:\\rcnext\\node_modules\\url-loader\\dist\\cjs.js",
+                        "loader": "D:\\rcnext\\node_modules\\url-loader\\index.js",
                         "options": {
                             "limit": 10000,
                             "name": "static/media/[name].[hash:8].[ext]"
@@ -160,12 +151,7 @@
                             "/[\\/\\\\\\\\]node_modules[\\/\\\\\\\\]/"
                         ],
                         "use": [
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
-                                "options": {
-                                    "poolTimeout": null
-                                }
-                            },
+                            "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
                             {
                                 "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
                                 "options": {
@@ -206,12 +192,7 @@
                     {
                         "test": "/\\.js$/",
                         "use": [
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
-                                "options": {
-                                    "poolTimeout": null
-                                }
-                            },
+                            "D:\\rcnext\\node_modules\\thread-loader\\dist\\cjs.js",
                             {
                                 "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
                                 "options": {
@@ -253,7 +234,8 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "modules": true
+                                    "modules": true,
+                                    "localIdentName": "[path]__[name]___[local]"
                                 }
                             },
                             {
@@ -262,46 +244,6 @@
                                     "ident": "postcss"
                                 }
                             }
-                        ]
-                    },
-                    {
-                        "test": "/\\.(scss|sass)$/",
-                        "exclude": "/\\.module\\.(scss|sass)$/",
-                        "use": [
-                            "D:\\rcnext\\node_modules\\style-loader\\index.js",
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
-                                "options": {
-                                    "importLoaders": 2
-                                }
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
-                                "options": {
-                                    "ident": "postcss"
-                                }
-                            },
-                            "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js"
-                        ]
-                    },
-                    {
-                        "test": "/\\.module\\.(scss|sass)$/",
-                        "use": [
-                            "D:\\rcnext\\node_modules\\style-loader\\index.js",
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
-                                "options": {
-                                    "importLoaders": 2,
-                                    "modules": true
-                                }
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\lib\\index.js",
-                                "options": {
-                                    "ident": "postcss"
-                                }
-                            },
-                            "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js"
                         ]
                     },
                     {
@@ -326,6 +268,12 @@
     },
     "plugins": [
         {
+            "replacements": {
+                "NODE_ENV": "development",
+                "PUBLIC_URL": ""
+            }
+        },
+        {
             "options": {
                 "template": "D:\\rcnext\\public\\index.html",
                 "filename": "index.html",
@@ -338,17 +286,12 @@
                 "showErrors": true,
                 "chunks": "all",
                 "excludeChunks": [],
-                "chunksSortMode": "auto",
-                "meta": {},
                 "title": "Webpack App",
                 "xhtml": false
             }
         },
         {
-            "replacements": {
-                "NODE_ENV": "development",
-                "PUBLIC_URL": ""
-            }
+            "options": {}
         },
         {
             "definitions": {
@@ -375,20 +318,6 @@
         {
             "resourceRegExp": "/^\\.\\/locale$/",
             "contextRegExp": "/moment$/"
-        },
-        {
-            "opts": {
-                "publicPath": "/",
-                "basePath": "",
-                "fileName": "asset-manifest.json",
-                "transformExtensions": "/^(gz|map)$/i",
-                "writeToFileEmit": false,
-                "seed": null,
-                "filter": null,
-                "map": null,
-                "generate": null,
-                "sort": null
-            }
         }
     ],
     "node": {
@@ -398,5 +327,7 @@
         "tls": "empty",
         "child_process": "empty"
     },
-    "performance": false
+    "performance": {
+        "hints": false
+    }
 }
