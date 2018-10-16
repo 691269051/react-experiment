@@ -6,18 +6,18 @@
 export default {
     state: 0,
     reducers: {
-        adds: (state, payload) => state + payload
+        adds: (state, payload) => state + payload,
     },
-    effects:(dispatch) =>( {
+    effects: dispatch => ({
         add: async (state, payload) => {
-            let a = await new Promise( (resolve, reject) => {
+            let a = await new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve(1);
                 }, 3000);
-            })
+            });
             console.log(a);
-            dispatch.count.adds(state, payload)
+            dispatch.count.adds(state, payload);
             // return state + payload;
-        }
-    })
+        },
+    }),
 };
