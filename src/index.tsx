@@ -1,20 +1,20 @@
+import './index.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './controller';
-import './index.css';
+
 import registerServiceWorker from './registerServiceWorker';
 import App from './routers';
+import { store } from './store';
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
     </Provider>,
     document.getElementById('root')
 );
-
-// if (module.hot) {
-//     module.hot.accept();
-// }
 
 registerServiceWorker();
