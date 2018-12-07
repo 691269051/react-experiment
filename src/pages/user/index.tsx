@@ -11,21 +11,21 @@ interface Props {
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-    // add: dispatc,
+    // add: d,
     incrementSharksAsync2: () =>
         dispatch({ type: 'count/increment', payload: 2 }),
 });
 
 const mapStateToProps = (state: iRootState) => ({
-    count: state.count,
+    counts: state.count,
 });
 
-interface Props extends Partial<ReturnType<typeof mapStateToProps>>,
-Partial<ReturnType<typeof mapDispatchToProps>> {}
+interface Props
+    extends Partial<ReturnType<typeof mapStateToProps>>,
+        Partial<ReturnType<typeof mapDispatchToProps>> {}
 
-const User = (props: Props): JSX.Element => {
+const User: React.SFC<Props> = ({ name, counts, incrementSharksAsync2 }) => {
     const [count, setCount] = React.useState(0);
-    const { name } = props;
 
     return (
         <>
