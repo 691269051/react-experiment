@@ -5,7 +5,7 @@ import { Dispatch, iRootState } from 'src/store';
 
 import styles from './index.module.css';
 
-interface ownProps {
+interface Props {
     name: string;
     path: string;
 }
@@ -20,10 +20,8 @@ const mapStateToProps = (state: iRootState) => ({
     count: state.count,
 });
 
-type connectedProps = ReturnType<typeof mapStateToProps> &
-    ReturnType<typeof mapDispatchToProps> &
-    ownProps;
-type Props = connectedProps;
+interface Props extends Partial<ReturnType<typeof mapStateToProps>>,
+Partial<ReturnType<typeof mapDispatchToProps>> {}
 
 const User = (props: Props): JSX.Element => {
     const [count, setCount] = React.useState(0);
