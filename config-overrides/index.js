@@ -11,8 +11,8 @@ module.exports = function override(config, env) {
     config = addLodash(config, env);
     config = addLess(config, env);
     // config = setPostcss(config, env);
+    // config = setPathmap(config, env);
     config = setHot(config, env);
-    config = setPathmap(config, env);
     config = getConfig(config, env);
     return config;
 };

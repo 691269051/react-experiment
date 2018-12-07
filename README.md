@@ -3,5 +3,5 @@
 ## 创建 react 项目
 
 ```bash
-npx create-react-app react-app
+npx create-react-app react-appname --use-pnp
 ```

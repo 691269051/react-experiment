@@ -1,0 +1,32 @@
+{
+  "extends": "./path.json",
+  "compilerOptions": {
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "lib": [
+      "es6",
+      "scripthost",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "jest",
+    "src/setupTests.ts"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

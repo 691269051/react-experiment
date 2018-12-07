@@ -6,61 +6,63 @@
     "proxy": "http://121.40.90.141:8003",
     "dependencies": {
         "@reach/router": "^1.2.1",
-        "@rematch/core": "^1.0.0-beta.4",
-        "antd": "^3.10.1",
+        "@rematch/core": "^1.0.6",
+        "antd": "^3.11.0",
         "anujs": "^1.4.8",
         "classname": "^0.0.0",
-        "immer": "^1.7.2",
-        "less": "3.8.1",
-        "localforage": "^1.7.2",
+        "immer": "^1.7.4",
+        "less": "3.9.0",
+        "localforage": "^1.7.3",
         "lodash": "^4.17.11",
-        "react": "^16.5.2",
+        "react": "^16.7.0-alpha.2",
         "react-addons-css-transition-group": "^15.6.2",
-        "react-dnd": "^5.0.0",
-        "react-dom": "^16.5.2",
+        "react-dnd": "^7.0.2",
+        "react-dom": "^16.7.0-alpha.2",
         "react-loadable": "^5.5.0",
         "react-motion": "^0.5.2",
         "react-redux": "^5.0.7",
         "react-transition-group": "^2.5.0",
-        "styled-components": "^4.0.0"
+        "styled-components": "^4.0.3",
+        "typescript": "^3.2.1"
     },
     "scripts": {
+        "analyze": "source-map-explorer build/static/js/main.*",
+        "update": "yarn upgrade-interactive --latest",
         "start": "react-app-rewired start",
+        "server": "node ./server",
         "build": "rm -rf ./build && react-app-rewired build",
-        "test": "react-app-rewired test --env=jsdom"
+        "test": "react-app-rewired test"
     },
     "devDependencies": {
-        "@types/jest": "^23.3.2",
-        "@types/lodash": "^4.14.117",
-        "@types/node": "^10.12.0",
-        "@types/reach__router": "^1.2.0",
-        "@types/react": "^16.4.17",
-        "@types/react-dnd": "^3.0.2",
+        "@types/jest": "^23.3.9",
+        "@types/lodash": "^4.14.118",
+        "@types/node": "^10.12.12",
+        "@types/reach__router": "^1.2.2",
+        "@types/react": "^16.7.13",
         "@types/react-dom": "^16.0.9",
-        "babel-core": "^7.0.0-0",
-        "babel-plugin-import": "^1.9.1",
+        "@types/react-redux": "^6.0.2",
+        "babel-plugin-import": "^1.11.0",
         "colors": "^1.3.2",
         "cross-env": "^5.2.0",
+        "express": "^4.16.4",
         "less-loader": "^4.1.0",
         "less-vars-to-js": "^1.3.0",
         "react-app-rewire-less-modules": "^1.3.0",
         "react-app-rewire-lodash": "^2.0.0",
         "react-app-rewire-postcss": "^3.0.2",
-        "react-app-rewired": "^2.0.0",
-        "react-hot-loader": "^4.3.11",
-        "react-scripts": "2.0.5"
+        "react-app-rewired": "2.0.0",
+        "react-hot-loader": "^4.3.12",
+        "react-scripts": "2.1.1",
+        "sas": "3.0.4",
+        "source-map-explorer": "^1.6.0"
     },
-    "browserslist": {
-        "development": [
-            "last 2 chrome versions",
-            "last 2 firefox versions",
-            "last 2 edge versions"
-        ],
-        "production": [
-            ">1%",
-            "last 4 versions",
-            "Firefox ESR",
-            "not ie < 11"
-        ]
-    }
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

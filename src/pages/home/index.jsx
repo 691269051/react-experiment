@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 // import { Link } from '@reach/router';
 import produce from 'immer';
-import { get } from './network';
 import RanderProps from './RenderProps';
 import { Button } from 'antd';
 import styled from 'styled-components';
@@ -41,11 +40,10 @@ class Home extends PureComponent {
             <div className={styles.ddd}>
                 <div style={{color:'red'}}>dddd1234</div>
                 <h1>{count}</h1>
-                {/* <h2>{num}</h2> */}
-                {/* <Link to="api" replace> */}
-                <Button onClick={get} type="dashed">
+                {/* <h2>dddd</h2> */}
+                {/* <Button onClick={get} type="dashed">
                     get data
-                </Button>
+                </Button> */}
                 {/* </Link> */}
                 <Button type="primary" className="" onClick={this.addOne}>
                     加1

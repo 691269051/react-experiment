@@ -24,6 +24,7 @@ module.exports = function getConfig(config, env) {
     if (env === 'development') {
         writeFile(
             './config.overrides.development.json',
+            // fs.createReadStream()
             JSON.stringify(config, null, 4)
         );
     } else {

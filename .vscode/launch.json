@@ -49,6 +49,16 @@
             "protocol": "inspector",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "调试 yarn server",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "server"
+            ],
+            "port": 9229
         }
     ]
 }
