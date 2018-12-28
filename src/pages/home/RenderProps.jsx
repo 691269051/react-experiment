@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react'
 
 class RenderProps extends React.Component {
     state = {
         index: 0,
-    };
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         if (this.state.index !== nextState.index) {
-            return true;
+            return true
         }
         if (this.props.children.toString() === nextProps.children.toString()) {
-            return false;
+            return false
         }
-        return true;
+        return true
     }
 
     componentDidMount() {
-        console.log(this);
-        console.log(this._reactInternalFiber);
+        console.log(this)
+        console.log(this._reactInternalFiber)
     }
 
     render() {
@@ -26,8 +26,8 @@ class RenderProps extends React.Component {
                 {/* <h2>dddd</h2> */}
                 {this.props.children(this.state, this.props, this)}
             </>
-        );
+        )
     }
 }
 
-export default RenderProps;
+export default RenderProps

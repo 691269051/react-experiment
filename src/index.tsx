@@ -1,12 +1,12 @@
-import './index.css';
+import './index.css'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import registerServiceWorker from './registerServiceWorker';
-import App from './routers';
-import { store } from './store';
+import registerServiceWorker from './registerServiceWorker'
+import App from './routers'
+import { store } from './store'
 
 ReactDOM.render(
     <Provider store={store}>
@@ -15,6 +15,6 @@ ReactDOM.render(
         </React.StrictMode>
     </Provider>,
     document.getElementById('root')
-);
+)
 
-registerServiceWorker();
+registerServiceWorker()

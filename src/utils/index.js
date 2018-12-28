@@ -1,3 +1,3 @@
 export const ddd = () => {
-    console.log('asdsad');
+    console.log('asdsad')
 }

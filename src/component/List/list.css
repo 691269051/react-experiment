@@ -45,7 +45,7 @@
     transition: opacity 0.5s ease-in;
 }
 
-.divs{
+.divs {
     display: flex;
     flex-direction: row;
     will-change: margin-left;

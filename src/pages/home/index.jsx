@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
+import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 // import { Link } from '@reach/router';
-import produce from 'immer';
-import RanderProps from './RenderProps';
-import { Button } from 'antd';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import styles from './home.module.css';
+import produce from 'immer'
+import RanderProps from './RenderProps'
+import { Button } from 'antd'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import styles from './home.module.css'
 
 const H1 = styled.h1`
     color: blue;
@@ -14,31 +14,34 @@ const H1 = styled.h1`
     font-size: ${props => props.num + 24}px;
     line-height: 1.5;
     /* line-height:1; */
-`;
+`
 
 class Home extends PureComponent {
     addOne = () => {
-        this.props.addOne();
+        this.props.addOne()
         // this.setState(
         //     produce(draft => {
         //         draft.num += 1;
         //     })
         // );
         // console.log(this._state)
-        this._setState&&this._setState.setState(produce(draft => ({
-            index:draft.index+1
-        })))
-    };
+        this._setState &&
+            this._setState.setState(
+                produce(draft => ({
+                    index: draft.index + 1,
+                }))
+            )
+    }
 
-    _setState = null;
+    _setState = null
 
     render() {
-        let { count } = this.props;
+        let { count } = this.props
         // let { num } = this.state;
         // console.log(this.props.location.state);
         return (
             <div className={styles.ddd}>
-                <div style={{color:'red'}}>dddd1234</div>
+                <div style={{ color: 'red' }}>dddd1234</div>
                 <h1>{count}</h1>
                 {/* <h2>dddd</h2> */}
                 {/* <Button onClick={get} type="dashed">
@@ -52,34 +55,38 @@ class Home extends PureComponent {
                 {this.props.children}
                 <RanderProps>
                     {(state, props, setState) => {
-                        this._setState = setState;
-                        this._state = state;
-                        return <div className={styles.show}>RanderProps {state.index}</div>;
+                        this._setState = setState
+                        this._state = state
+                        return (
+                            <div className={styles.show}>
+                                RanderProps {state.index}
+                            </div>
+                        )
                     }}
                 </RanderProps>
             </div>
-        );
+        )
     }
 }
 
 Home.propTypes = {
     count: PropTypes.number,
-    addOne: PropTypes.func
-};
+    addOne: PropTypes.func,
+}
 const mapStateToProps = state => {
     return {
-        count: state.count
-    };
-};
+        count: state.count,
+    }
+}
 
 const mapDispatchToProps = dispatch => {
     return {
         addOne: () => {
-            dispatch.count.add(1);
-        }
-    };
-};
+            dispatch.count.add(1)
+        },
+    }
+}
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Home);
+)(Home)

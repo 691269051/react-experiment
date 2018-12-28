@@ -1,12 +1,12 @@
 interface DOMRectReadOnly {
-    readonly x: number;
-    readonly y: number;
-    readonly width: number;
-    readonly height: number;
-    readonly top: number;
-    readonly right: number;
-    readonly bottom: number;
-    readonly left: number;
+    readonly x: number
+    readonly y: number
+    readonly width: number
+    readonly height: number
+    readonly top: number
+    readonly right: number
+    readonly bottom: number
+    readonly left: number
 }
 
 declare global {
@@ -15,20 +15,20 @@ declare global {
     }
 
     interface ResizeObserverEntry {
-        readonly target: Element;
-        readonly contentRect: DOMRectReadOnly;
+        readonly target: Element
+        readonly contentRect: DOMRectReadOnly
     }
 
     interface ResizeObserver {
-        observe(target: Element): void;
-        unobserve(target: Element): void;
-        disconnect(): void;
+        observe(target: Element): void
+        unobserve(target: Element): void
+        disconnect(): void
     }
 }
 
 declare var ResizeObserver: {
-    prototype: ResizeObserver;
-    new(callback: ResizeObserverCallback): ResizeObserver;
+    prototype: ResizeObserver
+    new (callback: ResizeObserverCallback): ResizeObserver
 }
 
-export default ResizeObserver;
+export default ResizeObserver
