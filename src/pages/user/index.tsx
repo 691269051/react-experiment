@@ -12,8 +12,9 @@ interface Props {
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     add: dispatch.count.increment,
-    incrementSharksAsync2: () =>
-        dispatch({ type: 'count/increment', payload: 2 }),
+    incrementSharksAsync2: () => {
+        return dispatch({ type: 'count/increment', payload: 2 })
+    },
 })
 
 const mapStateToProps = (state: iRootState) => ({
@@ -30,7 +31,7 @@ const User: React.SFC<Props> = ({ name, counts, incrementSharksAsync2 }) => {
     return (
         <>
             <div
-                className={styles.show}
+                className={styles.ddd}
                 onClick={() =>
                     setCount(
                         produce(prevCount => {

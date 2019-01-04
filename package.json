@@ -23,7 +23,7 @@
         "react-redux": "^6.0.0",
         "react-transition-group": "^2.5.2",
         "styled-components": "^4.1.3",
-        "typescript": "^3.2.1"
+        "typescript": "^3.2.2"
     },
     "scripts": {
         "analyze": "source-map-explorer build/static/js/main.*",
@@ -57,7 +57,7 @@
         "react-app-rewire-postcss": "^3.0.2",
         "react-app-rewired": "2.0.0",
         "react-hot-loader": "^4.6.3",
-        "react-scripts": "2.1.2",
+        "react-scripts": "2.1.1",
         "sas": "3.0.4",
         "source-map-explorer": "^1.6.0"
     },
