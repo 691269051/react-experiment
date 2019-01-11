@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-01-09 10:51:26
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-01-11 13:20:35
+ * @Last Modified time: 2019-01-11 15:44:28
  */
 import './index.css'
 
@@ -16,9 +16,9 @@ import { store } from './store'
 
 ReactDOM.render(
     <Provider store={store}>
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
+        {/* <React.StrictMode> */}
+        <App />
+        {/* </React.StrictMode> */}
     </Provider>,
     document.getElementById('root')
 )

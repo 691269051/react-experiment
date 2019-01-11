@@ -1,4 +1,4 @@
-const { addBabelPlugin } = require('customize-cra')
+const { addBabelPlugin, override } = require('customize-cra')
 
 function rewireHotLoader(config) {
     const mode = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
@@ -23,7 +23,10 @@ function rewireHotLoader(config) {
         }
     }
 
-    return addBabelPlugin(['react-hot-loader/babel'])
+    return config
 }
 
-module.exports = rewireHotLoader
+module.exports = override(
+    rewireHotLoader,
+    addBabelPlugin(['react-hot-loader/babel'])
+)

@@ -19,7 +19,7 @@ const H1 = styled.h1`
 
 class Home extends PureComponent {
     addOne = () => {
-        this.props.addOne()
+        // this.props.addOne()
         _.add(1, 2)
         // this.setState(
         //     produce(draft => {
@@ -53,7 +53,7 @@ class Home extends PureComponent {
                 <Button type="primary" className="" onClick={this.addOne}>
                     加1
                 </Button>
-                <H1 num={count}>實驗1</H1>
+                <H1 num={count}>實驗12</H1>
                 {this.props.children}
                 <RanderProps>
                     {(state, props, setState) => {

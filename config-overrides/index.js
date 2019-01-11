@@ -4,8 +4,8 @@ const addAntd = require('./addAntd')
 const addLodash = require('./addLodash')
 const getConfig = require('./getConfig')
 const addBundleVisualizer = require('./addBundleVisualizer')
-const setHot = require('./addHot')
-// const addWebpackAlias = require('./addWebpackAlias');
+const addHot = require('./addHot')
+const addWebpackAlias = require('./addWebpackAlias');
 // const addPostcssPlugins = require('./addPostcssPlugins');
 
 module.exports = override(
@@ -13,6 +13,8 @@ module.exports = override(
     addAntd,
     addLodash,
     getConfig,
+    // disableChunk, // 开启后打包成一个js文件
+    // addWebpackAlias,
     addBundleVisualizer,
-    setHot
+    addHot
 )

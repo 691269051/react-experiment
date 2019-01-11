@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 // import Loadable from 'react-loadable';
 import Loading from 'component/loading'
-import { hot } from 'react-hot-loader'
+import { hot } from 'react-hot-loader/root'
 import { Router } from '@reach/router'
 import User from 'pages/user'
 import Home from 'pages/home'
@@ -19,6 +19,6 @@ const Routers: React.SFC<{}> = () => {
         </Suspense>
     )
 }
-const App = hot(module)(Routers)
+const App = hot(Routers)
 
 export default App
