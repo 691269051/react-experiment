@@ -1,5 +1,5 @@
 import produce from 'immer'
-import * as React from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch, iRootState } from 'src/store'
 
@@ -25,7 +25,12 @@ interface Props
     extends Partial<ReturnType<typeof mapStateToProps>>,
         Partial<ReturnType<typeof mapDispatchToProps>> {}
 
-const User: React.SFC<Props> = ({ name, counts, incrementSharksAsync2 }) => {
+const User: React.SFC<Props> = ({
+    name,
+    add,
+    counts,
+    incrementSharksAsync2,
+}) => {
     const [count, setCount] = React.useState(0)
 
     return (
@@ -48,6 +53,6 @@ const User: React.SFC<Props> = ({ name, counts, incrementSharksAsync2 }) => {
 }
 
 export default connect(
-    mapStateToProps as any,
-    mapDispatchToProps as any
+    mapStateToProps,
+    mapDispatchToProps
 )(User)

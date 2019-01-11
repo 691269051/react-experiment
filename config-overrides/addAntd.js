@@ -1,13 +1,6 @@
-const { injectBabelPlugin } = require('react-app-rewired');
+const { fixBabelImports } = require('customize-cra')
 
-module.exports = function addAntd(config, env) {
-    config = injectBabelPlugin(
-        [
-            'import',
-            { libraryName: 'antd', libraryDirectory: 'es', style: true }
-        ],
-        config
-    );
-
-    return config;
-};
+module.exports = fixBabelImports('antd', {
+    libraryDirectory: 'es',
+    style: true,
+})

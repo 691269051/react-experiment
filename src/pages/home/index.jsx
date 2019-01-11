@@ -1,13 +1,14 @@
+import { Button } from 'antd'
+import produce from 'immer'
+import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-// import { Link } from '@reach/router';
-import produce from 'immer'
-import RanderProps from './RenderProps'
-import { Button } from 'antd'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import _ from 'lodash'
 import styles from './home.module.css'
+import RanderProps from './RenderProps'
 
+// import { Link } from '@reach/router';
 const H1 = styled.h1`
     color: blue;
     height: ${props => props.num + 24}px;
@@ -19,6 +20,7 @@ const H1 = styled.h1`
 class Home extends PureComponent {
     addOne = () => {
         this.props.addOne()
+        _.add(1, 2)
         // this.setState(
         //     produce(draft => {
         //         draft.num += 1;

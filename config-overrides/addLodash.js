@@ -1,7 +1,5 @@
-var rewireLodash = require('react-app-rewire-lodash');
-var babelPluginOptions = {};
-module.exports = function addLodash(config, env) {
-    config = rewireLodash(config, env, babelPluginOptions);
-
-    return config;
-};
+const { fixBabelImports } = require('customize-cra')
+module.exports = fixBabelImports('lodash', {
+    libraryDirectory: '',
+    camel2DashComponentName: false,
+})

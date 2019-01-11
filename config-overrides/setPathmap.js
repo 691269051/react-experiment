@@ -25,7 +25,7 @@ function setAlias(object, alias) {
 }
 
 const option = {
-    // '@': './src'
+    '@': './src'
 };
 
 // 本方法设置项目别名 config.alias

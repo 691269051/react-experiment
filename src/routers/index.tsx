@@ -1,22 +1,24 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 // import Loadable from 'react-loadable';
 import Loading from 'component/loading'
 import { hot } from 'react-hot-loader'
 import { Router } from '@reach/router'
 import User from 'pages/user'
+import Home from 'pages/home'
 
-function N404() {
+const N404: React.SFC<{}> = () => {
     return <div>404</div>
 }
 
-const Routers = () => {
+const Routers: React.SFC<{}> = () => {
     return (
-        <React.Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
             <Router>
-                <User path="/" name="userState" />
+                <Home path="/" name="userState" />
             </Router>
-            ;
-        </React.Suspense>
+        </Suspense>
     )
 }
-export default hot(module)(Routers)
+const App = hot(module)(Routers)
+
+export default App

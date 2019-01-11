@@ -1,23 +1,25 @@
 {
     "mode": "production",
     "bail": true,
-    "devtool": "source-map",
+    "devtool": false,
     "entry": [
         "D:\\rcnext\\src\\index.tsx"
     ],
     "output": {
         "path": "D:\\rcnext\\build",
+        "pathinfo": false,
         "filename": "static/js/[name].[chunkhash:8].js",
         "chunkFilename": "static/js/[name].[chunkhash:8].chunk.js",
         "publicPath": "/"
     },
     "optimization": {
+        "minimize": true,
         "minimizer": [
             {
                 "options": {
                     "test": "/\\.js(\\?.*)?$/i",
                     "extractComments": false,
-                    "sourceMap": true,
+                    "sourceMap": false,
                     "cache": true,
                     "parallel": true,
                     "terserOptions": {
@@ -54,10 +56,7 @@
                     ],
                     "assetNameRegExp": "/\\.css$/g",
                     "cssProcessorOptions": {
-                        "map": {
-                            "inline": false,
-                            "annotation": true
-                        }
+                        "map": false
                     },
                     "cssProcessorPluginOptions": {}
                 },
@@ -155,74 +154,6 @@
             {
                 "oneOf": [
                     {
-                        "test": "/\\.module.less$/",
-                        "loader": [
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
-                                "options": {}
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
-                                "options": {
-                                    "importLoaders": 1,
-                                    "sourceMap": true,
-                                    "modules": true
-                                }
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
-                                "options": {
-                                    "ident": "postcss",
-                                    "sourceMap": true
-                                }
-                            },
-                            {
-                                "loader": "less-loader",
-                                "options": {
-                                    "javascriptEnabled": true,
-                                    "modifyVars": {
-                                        "@primary-color": "red",
-                                        "@sss-color": "blue"
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "test": "/\\.less$/",
-                        "exclude": "/\\.module.less$/",
-                        "loader": [
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
-                                "options": {}
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
-                                "options": {
-                                    "importLoaders": 1,
-                                    "sourceMap": true
-                                }
-                            },
-                            {
-                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
-                                "options": {
-                                    "ident": "postcss",
-                                    "sourceMap": true
-                                }
-                            },
-                            {
-                                "loader": "less-loader",
-                                "options": {
-                                    "javascriptEnabled": true,
-                                    "modifyVars": {
-                                        "@primary-color": "red",
-                                        "@sss-color": "blue"
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
                         "test": [
                             "/\\.bmp$/",
                             "/\\.gif$/",
@@ -246,20 +177,8 @@
                             "presets": [
                                 "D:\\rcnext\\node_modules\\babel-preset-react-app\\index.js"
                             ],
-                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@6.1.0:react-dev-utils@6.1.1:react-scripts@2.1.1",
+                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
                             "plugins": [
-                                [
-                                    "lodash",
-                                    {}
-                                ],
-                                [
-                                    "import",
-                                    {
-                                        "libraryName": "antd",
-                                        "libraryDirectory": "es",
-                                        "style": true
-                                    }
-                                ],
                                 [
                                     "D:\\rcnext\\node_modules\\react-scripts\\node_modules\\babel-plugin-named-asset-import\\index.js",
                                     {
@@ -269,6 +188,24 @@
                                             }
                                         }
                                     }
+                                ],
+                                [
+                                    "import",
+                                    {
+                                        "libraryName": "antd",
+                                        "libraryDirectory": "es",
+                                        "style": true
+                                    },
+                                    "fix-antd-imports"
+                                ],
+                                [
+                                    "import",
+                                    {
+                                        "libraryName": "lodash",
+                                        "libraryDirectory": "",
+                                        "camel2DashComponentName": false
+                                    },
+                                    "fix-lodash-imports"
                                 ]
                             ],
                             "cacheDirectory": true,
@@ -294,14 +231,14 @@
                             ],
                             "cacheDirectory": true,
                             "cacheCompression": true,
-                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@6.1.0:react-dev-utils@6.1.1:react-scripts@2.1.1",
+                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
                             "sourceMaps": false
                         }
                     },
                     {
                         "test": "/\\.css$/",
                         "exclude": "/\\.module\\.css$/",
-                        "loader": [
+                        "use": [
                             {
                                 "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
                                 "options": {}
@@ -310,14 +247,14 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             }
                         ],
@@ -325,7 +262,7 @@
                     },
                     {
                         "test": "/\\.module\\.css$/",
-                        "loader": [
+                        "use": [
                             {
                                 "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
                                 "options": {}
@@ -334,7 +271,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "sourceMap": true,
+                                    "sourceMap": false,
                                     "modules": true
                                 }
                             },
@@ -342,7 +279,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             }
                         ]
@@ -350,7 +287,7 @@
                     {
                         "test": "/\\.(scss|sass)$/",
                         "exclude": "/\\.module\\.(scss|sass)$/",
-                        "loader": [
+                        "use": [
                             {
                                 "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
                                 "options": {}
@@ -359,20 +296,20 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 2,
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
                                 "options": {
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             }
                         ],
@@ -380,7 +317,7 @@
                     },
                     {
                         "test": "/\\.module\\.(scss|sass)$/",
-                        "loader": [
+                        "use": [
                             {
                                 "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
                                 "options": {}
@@ -389,7 +326,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 2,
-                                    "sourceMap": true,
+                                    "sourceMap": false,
                                     "modules": true
                                 }
                             },
@@ -397,24 +334,57 @@
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
                                 "options": {
-                                    "sourceMap": true
+                                    "sourceMap": false
                                 }
                             }
                         ]
+                    },
+                    {
+                        "test": "/\\.less$/",
+                        "use": [
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\mini-css-extract-plugin\\dist\\loader.js",
+                                "options": {}
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
+                                "options": {
+                                    "importLoaders": 2
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
+                                "options": {
+                                    "ident": "postcss",
+                                    "sourceMap": false
+                                }
+                            },
+                            {
+                                "loader": "D:\\rcnext\\node_modules\\less-loader\\dist\\cjs.js",
+                                "options": {
+                                    "javascriptEnabled": true,
+                                    "modifyVars": {
+                                        "@primary-color": "rgba(194, 14, 155, 0.966)",
+                                        "@sss-color": "blue"
+                                    },
+                                    "source": false
+                                }
+                            }
+                        ],
+                        "sideEffects": true
                     },
                     {
                         "loader": "D:\\rcnext\\node_modules\\file-loader\\dist\\cjs.js",
                         "exclude": [
                             "/\\.(js|mjs|jsx|ts|tsx)$/",
                             "/\\.html$/",
-                            "/\\.json$/",
-                            "/\\.less$/"
+                            "/\\.json$/"
                         ],
                         "options": {
                             "name": "static/media/[name].[hash:8].[ext]"
@@ -545,8 +515,8 @@
                     "!**/*.json",
                     "!**/__tests__/**",
                     "!**/?(*.)(spec|test).*",
-                    "!src/setupProxy.js",
-                    "!src/setupTests.*"
+                    "!**/src/setupProxy.*",
+                    "!**/src/setupTests.*"
                 ],
                 "watch": "D:\\rcnext\\src",
                 "silent": true
@@ -570,8 +540,8 @@
                 "!**/*.json",
                 "!**/__tests__/**",
                 "!**/?(*.)(spec|test).*",
-                "!src/setupProxy.js",
-                "!src/setupTests.*"
+                "!**/src/setupProxy.*",
+                "!**/src/setupTests.*"
             ],
             "logger": {},
             "silent": true,

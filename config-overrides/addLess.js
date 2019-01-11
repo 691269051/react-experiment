@@ -1,17 +1,13 @@
-var lessModules = require('react-app-rewire-less-modules');
-const lessToJs = require('less-vars-to-js');
-const fs = require('fs');
-const path = require('path');
+const lessToJs = require('less-vars-to-js')
+const fs = require('fs')
+const path = require('path')
 
-const themer =lessToJs( fs.readFileSync(path.join(__dirname, '../config/antd-theme.less'), 'utf8'));
+const { addLessLoader } = require('customize-cra')
 
+const themer = lessToJs(
+    fs.readFileSync(path.join(__dirname, '../config/antd-theme.less'), 'utf8')
+)
 
-module.exports = function addLess(config, env) {
-    // config = rewireLess.withLoaderOptions({
-    //     javascriptEnabled: true, modifyVars: themer
-    // })(config, env);
+const loaderOptions = { javascriptEnabled: true, modifyVars: themer }
 
-    config = lessModules.withLoaderOptions({ javascriptEnabled: true, modifyVars: themer})(config, env);
-
-    return config;
-};
+module.exports = addLessLoader(loaderOptions);
