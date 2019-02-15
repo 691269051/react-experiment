@@ -1,7 +1,7 @@
 .ddd {
-    color: #fdfdfd;
+    color: rgb(253, 253, 253);
 }
 
 .show {
-    color: red;
+    color: @primary-color;
 }

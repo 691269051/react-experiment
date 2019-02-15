@@ -1,3 +1,9 @@
+/*
+ * @Author: 李雁辉
+ * @Date: 2019-01-16 15:57:59
+ * @Last Modified by: 李雁辉
+ * @Last Modified time: 2019-01-22 17:13:53
+ */
 import { Button } from 'antd'
 import produce from 'immer'
 import PropTypes from 'prop-types'
@@ -17,9 +23,45 @@ const H1 = styled.h1`
     /* line-height:1; */
 `
 
+/**
+ *
+ *
+ * @author 李雁辉
+ * @date 2019-01-16
+ * @class Home
+ * @extends {PureComponent}
+ */
 class Home extends PureComponent {
+    /**
+     * @description
+     * @author 李雁辉
+     * @date 2019-01-17
+     * @param {*} ddd
+     * @param {*} m
+     * @returns
+     * @memberof Home
+     */
+    ddd(ddd, m) {
+        return 'ass'
+    }
+
+    /**
+     * @description 实验方法
+     * @author 李雁辉
+     * @date 2019-01-22
+     * @returns
+     * @memberof Home
+     */
+    aaa() {
+        return { a: '你好' }
+    }
+
+    /**
+     * @description
+     * @memberof Home
+     */
     addOne = () => {
-        // this.props.addOne()
+        this.props.addOne()
         _.add(1, 2)
         // this.setState(
         //     produce(draft => {
@@ -53,7 +95,7 @@ class Home extends PureComponent {
                 <Button type="primary" className="" onClick={this.addOne}>
                     加1
                 </Button>
-                <H1 num={count}>實驗12</H1>
+                <H1 num={count}>實驗1</H1>
                 {this.props.children}
                 <RanderProps>
                     {(state, props, setState) => {

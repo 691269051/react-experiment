@@ -1,7 +1,7 @@
 {
     "mode": "production",
     "bail": true,
-    "devtool": false,
+    "devtool": "source-map",
     "entry": [
         "D:\\rcnext\\src\\index.tsx"
     ],
@@ -19,7 +19,7 @@
                 "options": {
                     "test": "/\\.js(\\?.*)?$/i",
                     "extractComments": false,
-                    "sourceMap": false,
+                    "sourceMap": true,
                     "cache": true,
                     "parallel": true,
                     "terserOptions": {
@@ -56,7 +56,10 @@
                     ],
                     "assetNameRegExp": "/\\.css$/g",
                     "cssProcessorOptions": {
-                        "map": false
+                        "map": {
+                            "inline": false,
+                            "annotation": true
+                        }
                     },
                     "cssProcessorPluginOptions": {}
                 },
@@ -169,7 +172,7 @@
                     {
                         "test": "/\\.(js|mjs|jsx|ts|tsx)$/",
                         "include": "D:\\rcnext\\src",
-                        "loader": "D:\\rcnext\\node_modules\\react-scripts\\node_modules\\babel-loader\\lib\\index.js",
+                        "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
                         "options": {
                             "customize": "D:\\rcnext\\node_modules\\babel-preset-react-app\\webpack-overrides.js",
                             "babelrc": false,
@@ -177,10 +180,10 @@
                             "presets": [
                                 "D:\\rcnext\\node_modules\\babel-preset-react-app\\index.js"
                             ],
-                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
+                            "cacheIdentifier": "production:babel-plugin-named-asset-import@0.3.0:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
                             "plugins": [
                                 [
-                                    "D:\\rcnext\\node_modules\\react-scripts\\node_modules\\babel-plugin-named-asset-import\\index.js",
+                                    "D:\\rcnext\\node_modules\\babel-plugin-named-asset-import\\index.js",
                                     {
                                         "loaderMap": {
                                             "svg": {
@@ -216,7 +219,7 @@
                     {
                         "test": "/\\.(js|mjs)$/",
                         "exclude": "/@babel(?:\\/|\\\\{1,2})runtime/",
-                        "loader": "D:\\rcnext\\node_modules\\react-scripts\\node_modules\\babel-loader\\lib\\index.js",
+                        "loader": "D:\\rcnext\\node_modules\\babel-loader\\lib\\index.js",
                         "options": {
                             "babelrc": false,
                             "configFile": false,
@@ -231,7 +234,7 @@
                             ],
                             "cacheDirectory": true,
                             "cacheCompression": true,
-                            "cacheIdentifier": "production:babel-plugin-named-asset-import@:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
+                            "cacheIdentifier": "production:babel-plugin-named-asset-import@0.3.0:babel-preset-react-app@7.0.0:react-dev-utils@7.0.1:react-scripts@2.1.3",
                             "sourceMaps": false
                         }
                     },
@@ -247,14 +250,14 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             }
                         ],
@@ -271,7 +274,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 1,
-                                    "sourceMap": false,
+                                    "sourceMap": true,
                                     "modules": true
                                 }
                             },
@@ -279,7 +282,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             }
                         ]
@@ -296,20 +299,20 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 2,
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
                                 "options": {
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             }
                         ],
@@ -326,7 +329,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\css-loader\\index.js",
                                 "options": {
                                     "importLoaders": 2,
-                                    "sourceMap": false,
+                                    "sourceMap": true,
                                     "modules": true
                                 }
                             },
@@ -334,13 +337,13 @@
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             },
                             {
                                 "loader": "D:\\rcnext\\node_modules\\sass-loader\\lib\\loader.js",
                                 "options": {
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             }
                         ]
@@ -362,7 +365,7 @@
                                 "loader": "D:\\rcnext\\node_modules\\postcss-loader\\src\\index.js",
                                 "options": {
                                     "ident": "postcss",
-                                    "sourceMap": false
+                                    "sourceMap": true
                                 }
                             },
                             {
@@ -373,7 +376,7 @@
                                         "@primary-color": "rgba(194, 14, 155, 0.966)",
                                         "@sss-color": "blue"
                                     },
-                                    "source": false
+                                    "source": true
                                 }
                             }
                         ],
@@ -561,7 +564,7 @@
             "diagnostics": [],
             "lints": [],
             "typescriptPath": "D:\\rcnext\\node_modules\\typescript\\lib\\typescript.js",
-            "typescriptVersion": "3.2.2",
+            "typescriptVersion": "3.2.4",
             "vue": false
         }
     ],

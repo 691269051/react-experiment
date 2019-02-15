@@ -11,6 +11,7 @@ const N404: React.SFC<{}> = () => {
 }
 
 const Routers: React.SFC<{}> = () => {
+    let a = { title: '你好' }
     return (
         <Suspense fallback={<Loading />}>
             <Router>
