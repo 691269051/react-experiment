@@ -2,12 +2,12 @@
 # get https://localhost:8001/list
 
 POST https://localhost:8001/gipms/mobile/person/detail HTTP/1.1
+content-type: application/json
 
 {
-    "cFlowCode":"ibsidoing_ic_meeting",
-    "processInstanceId":852023,
-    "taskId":852087,
-    "isTodo":1,
-    "nonce":"fa7124c2193c7316d9119fd2b221ce61"
-
+    "cFlowCode": "ibsidoing_ic_meeting",
+    "processInstanceId": "852023",
+    "taskId": "852087",
+    "isTodo": 1,
+    "nonce": "fa7124c2193c7316d9119fd2b221ce61"
 }

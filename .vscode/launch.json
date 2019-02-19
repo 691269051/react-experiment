@@ -53,12 +53,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "调试 yarn server",
-            "runtimeExecutable": "yarn",
-            "runtimeArgs": [
-                "server"
-            ],
-            "port": 9229
-        }
+            "name": "调试",
+            "program": "${workspaceFolder}/server/index.js"
+        },
     ]
 }
