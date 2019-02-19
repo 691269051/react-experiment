@@ -5,6 +5,7 @@ import { hot } from 'react-hot-loader/root'
 import { Router } from '@reach/router'
 import User from 'pages/user'
 import Home from 'pages/home'
+import HookTest from 'pages/hookTest'
 
 const N404: React.SFC<{}> = () => {
     return <div>404</div>
@@ -16,6 +17,7 @@ const Routers: React.SFC<{}> = () => {
         <Suspense fallback={<Loading />}>
             <Router>
                 <Home path="/" name="userState" />
+                <HookTest path="/hooks/dd" name="hooksTest" />
             </Router>
         </Suspense>
     )

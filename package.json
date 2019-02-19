@@ -58,6 +58,7 @@
         "react-hot-loader": "^4.7.0",
         "react-scripts": "2.1.5",
         "sas": "3.0.4",
+        "tslint-react-hooks": "^1.1.0",
         "webpack-bundle-analyzer": "^3.0.4"
     },
     "eslintConfig": {
