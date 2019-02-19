@@ -16,8 +16,8 @@ const Routers: React.SFC<{}> = () => {
     return (
         <Suspense fallback={<Loading />}>
             <Router>
-                <Home path="/" name="userState" />
-                <HookTest path="/hooks/dd" name="hooksTest" />
+                {/* <Home path="/" name="userState" /> */}
+                <HookTest path="/" name="hooksTest" />
             </Router>
         </Suspense>
     )
