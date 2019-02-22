@@ -22,7 +22,7 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     const [num, setNum] = useState<number>(0)
 
     const setNumCb = (e: React.MouseEvent) => {
-        const a = useTimeout('1111')
+        // const a = useTimeout('1111')
         console.log(e.target)
         setNum(num => num + 1)
     }
