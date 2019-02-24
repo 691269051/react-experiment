@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+config-overrides/config.overrides.dev.json
+config-overrides/config.overrides.prod.json
 
 # testing
 /coverage
