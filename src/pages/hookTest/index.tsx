@@ -27,6 +27,7 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
         setNum(num => num + 1)
     }
 
+    // 错误代码
     if (true) {
         const a = useTimeout('1111')
     }
