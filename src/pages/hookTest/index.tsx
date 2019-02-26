@@ -40,13 +40,14 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     if (num > 12) {
         const [a, setA] = useState<number>(0)
     }
+    //
     useEffect(() => {
         console.log(num, num2)
         return () => {
             console.log('卸载', num, num2)
         }
     }, [])
-
+    // TODO: 带dom操作副作用的hooks
     useLayoutEffect(() => {
         document.title = `第 ${num} 页`
         console.log(12)
