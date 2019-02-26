@@ -36,10 +36,10 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
         setNum2(num2 => num2 + 1)
     }
 
+    // FIXME:hooks错误使用示范, 测试tslint插件检测
     if (num > 12) {
         const [a, setA] = useState<number>(0)
     }
-
     useEffect(() => {
         console.log(num, num2)
         return () => {
