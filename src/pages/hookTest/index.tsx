@@ -5,9 +5,12 @@
  * @Last Modified time: 2019-02-26 10:53:43
  */
 import React, {
+    createContext,
+    useContext,
     useDebugValue,
     useEffect,
     useLayoutEffect,
+    useMemo,
     useState,
 } from 'react'
 
@@ -18,6 +21,8 @@ interface Iprops {
     name: string
 }
 
+const ThemeContext = createContext({ color: 'red' })
+
 const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
@@ -25,9 +30,11 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
         name: string
         age: number
     }>({ name: '李雁辉', age: 18 })
+    const context = useContext(ThemeContext)
+    const memo = useMemo(() => num ** num2, [num, num2])
 
-    const setNumCb = (e: React.MouseEvent) => {
-        console.log(e.target)
+    const setNumCb = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        console.log(e.currentTarget)
         setNum(num => num + 1)
     }
 
@@ -55,11 +62,12 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
 
     return (
         <div style={{ height: '200px', width: '200px', color: 'red' }}>
-            <div className={styles.title} onClick={setNumCb}>
+            <div style={context} className={styles.title} onClick={setNumCb}>
                 {num}{' '}
             </div>
             <div onClick={setNumCb2}>{num2} </div>
-            {num ** num2}
+            {`最新值${num ** num2}
+            原始值${memo}`}
         </div>
     )
 }
