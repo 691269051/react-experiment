@@ -12,6 +12,7 @@ import React, {
     useLayoutEffect,
     useMemo,
     useState,
+    useReducer,
 } from 'react'
 
 import styles from './index.module.css'
@@ -21,15 +22,29 @@ interface Iprops {
     name: string
 }
 
+interface Istate {
+    count: number
+}
+
+const initialState: Istate = { count: 0 }
+
+const reducer = (state: Istate, action: { type: string }) => {
+    switch (action.type) {
+        case 'increment':
+            return { count: state.count + 1 }
+        case 'decrement':
+            return { count: state.count - 1 }
+        default:
+            throw new Error()
+    }
+}
+
 const ThemeContext = createContext({ color: 'red' })
 
 const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
-    const [{ name: names, age }, setObj] = useState<{
-        name: string
-        age: number
-    }>({ name: '李雁辉', age: 18 })
+    const [] = useReducer(reducer, initialState)
     const context = useContext(ThemeContext)
     const memo = useMemo(() => num ** num2, [num, num2])
 
@@ -44,9 +59,9 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     }
 
     // FIXME:hooks错误使用示范, 测试tslint插件检测
-    if (num > 12) {
-        const [a, setA] = useState<number>(0)
-    }
+    // if (num > 12) {
+    //     const [a, setA] = useState<number>(0)
+    // }
     //
     useEffect(() => {
         console.log(num, num2)
