@@ -6,13 +6,17 @@
  */
 import React, {
     createContext,
+    forwardRef,
+    useCallback,
     useContext,
     useDebugValue,
     useEffect,
+    useImperativeHandle,
     useLayoutEffect,
     useMemo,
-    useState,
     useReducer,
+    useRef,
+    useState,
 } from 'react'
 
 import styles from './index.module.css'
@@ -40,16 +44,34 @@ const reducer = (state: Istate, action: { type: string }) => {
 }
 
 const ThemeContext = createContext({ color: 'red' })
+interface IinputProps {}
+const FancyInput: React.SFC<IinputProps> = (props, ref) => {
+    const inputRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => ({
+        focus: () => {
+            if (inputRef.current !== null) {
+                inputRef.current.focus()
+            }
+        },
+    }))
+    return <input ref={inputRef} />
+}
+const FancyInputC = forwardRef(FancyInput)
 
 const HookTest: React.SFC<Iprops> = ({ path, name }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
-    const [] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(reducer, initialState)
     const context = useContext(ThemeContext)
     const memo = useMemo(() => num ** num2, [num, num2])
+    const inputRef = useRef<HTMLInputElement>(null)
+    // const callBack = useCallback()
 
     const setNumCb = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         console.log(e.currentTarget)
+        if (inputRef.current !== null) {
+            inputRef.current.focus()
+        }
         setNum(num => num + 1)
     }
 
@@ -83,6 +105,10 @@ const HookTest: React.SFC<Iprops> = ({ path, name }) => {
             <div onClick={setNumCb2}>{num2} </div>
             {`最新值${num ** num2}
             原始值${memo}`}
+            <div style={{ color: 'blue' }}>{state.count}</div>
+            <FancyInputC ref={inputRef} />
+            <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+            <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
         </div>
     )
 }
