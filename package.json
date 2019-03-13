@@ -10,7 +10,7 @@
     "antd": "^3.15.0",
     "anujs": "^1.5.2",
     "classname": "^0.0.0",
-    "immer": "^2.1.0",
+    "immer": "^2.1.2",
     "less": "3.9.0",
     "localforage": "^1.7.3",
     "lodash": "^4.17.11",
@@ -38,9 +38,9 @@
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/lodash": "^4.14.123",
-    "@types/node": "^11.11.1",
+    "@types/node": "^11.11.3",
     "@types/reach__router": "^1.2.3",
-    "@types/react": "^16.8.6",
+    "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-redux": "^7.0.3",
     "babel-plugin-import": "^1.11.0",
@@ -59,7 +59,7 @@
     "react-hot-loader": "^4.8.0",
     "react-scripts": "2.1.8",
     "sas": "3.0.4",
-    "tslint-react-hooks": "^2.0.0-alpha.2",
+    "tslint-react-hooks": "^2.0.0",
     "webpack-bundle-analyzer": "^3.1.0"
   },
   "eslintConfig": {
