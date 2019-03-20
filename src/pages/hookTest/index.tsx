@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-03-12 17:15:12
+ * @Last Modified time: 2019-03-20 16:45:52
  */
 import React, {
     createContext,
@@ -20,6 +20,7 @@ import React, {
 } from 'react'
 
 import styles from './index.module.css'
+import { number } from 'prop-types'
 interface Iprops {
     path: string
     name: string
@@ -31,14 +32,14 @@ interface Istate {
 
 const initialState: Istate = { count: 0 }
 
-const reducer = (state: Istate, action: { type: string }) => {
+export const reducer = (state: Istate, action: { type: string }) => {
     switch (action.type) {
         case 'increment':
             return { count: state.count + 1 }
         case 'decrement':
             return { count: state.count - 1 }
         default:
-            throw new Error()
+            throw new Error('未找到相应的action')
     }
 }
 
