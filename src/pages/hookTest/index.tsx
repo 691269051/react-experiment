@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-02-26 10:53:43
+ * @Last Modified time: 2019-03-12 17:15:12
  */
 import React, {
     createContext,
@@ -20,7 +20,6 @@ import React, {
 } from 'react'
 
 import styles from './index.module.css'
-
 interface Iprops {
     path: string
     name: string
@@ -45,7 +44,10 @@ const reducer = (state: Istate, action: { type: string }) => {
 
 const ThemeContext = createContext({ color: 'red' })
 interface IinputProps {}
-const FancyInput: React.SFC<IinputProps> = (props, ref) => {
+const FancyInput: React.SFC<IinputProps> = (
+    props,
+    ref: React.RefObject<{ focus: () => void }>
+) => {
     const inputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => ({
         focus: () => {
