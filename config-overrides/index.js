@@ -1,11 +1,11 @@
-const { override } = require('customize-cra')
+const { override, disableChunk } = require('customize-cra')
 const addLessLoader = require('./addLess')
 const addAntd = require('./addAntd')
 const addLodash = require('./addLodash')
 const getConfig = require('./getConfig')
 const addBundleVisualizer = require('./addBundleVisualizer')
 const addHot = require('./addHot')
-const addWebpackAlias = require('./addWebpackAlias');
+const addWebpackAlias = require('./addWebpackAlias')
 // const addPostcssPlugins = require('./addPostcssPlugins');
 
 module.exports = override(

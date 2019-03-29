@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-03-20 16:45:52
+ * @Last Modified time: 2019-03-22 15:37:32
  */
 import React, {
     createContext,
@@ -20,7 +20,7 @@ import React, {
 } from 'react'
 
 import styles from './index.module.css'
-import { number } from 'prop-types'
+
 interface Iprops {
     path: string
     name: string
