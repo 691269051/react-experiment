@@ -1,5 +1,5 @@
 {
-    "javascript.implicitProjectConfig.checkJs": true,
-    "git.ignoreLimitWarning": false,
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+  "javascript.implicitProjectConfig.checkJs": true,
+  "git.ignoreLimitWarning": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

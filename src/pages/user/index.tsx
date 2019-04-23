@@ -1,7 +1,7 @@
 import produce from 'immer'
 import React from 'react'
 import { connect } from 'react-redux'
-import { Dispatch, iRootState } from 'src/store'
+import { Dispatch, iRootState } from 'store'
 
 import styles from './index.module.css'
 
@@ -53,6 +53,6 @@ const User: React.SFC<Props> = ({
 }
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
+    // mapDispatchToProps
 )(User)
