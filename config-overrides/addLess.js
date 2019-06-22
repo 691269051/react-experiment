@@ -1,68 +1,92 @@
 const lessToJs = require('less-vars-to-js')
 const fs = require('fs')
 const path = require('path')
+const getCSSModuleLocalIdent = require('./getCssModuleLocalIdent')
 
 // const { addLessLoader } = require('customize-cra')
 
 const addLessLoader = (loaderOptions = {}) => config => {
-    const mode = process.env.NODE_ENV === "development" ? "dev" : "prod";
+    const mode = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
 
     // Need these for production mode, which are copied from react-scripts
-    const publicPath = require("react-scripts/config/paths").servedPath;
-    const shouldUseRelativeAssetPaths = publicPath === "./";
+    const publicPath = require('react-scripts/config/paths').servedPath
+    const shouldUseRelativeAssetPaths = publicPath === './'
     const shouldUseSourceMap =
-      mode === "prod" && process.env.GENERATE_SOURCEMAP !== "false";
+        mode === 'prod' && process.env.GENERATE_SOURCEMAP !== 'false'
+    const lessRegex = /\.less$/
+    const lessModuleRegex = /\.module\.less$/
+    const localIdentName =
+        loaderOptions.localIdentName || '[path][name]__[local]--[hash:base64:5]'
 
-    const lessLoader = [
-      mode === "dev"
-        ? require.resolve("style-loader")
-        : {
-            loader: require("mini-css-extract-plugin").loader,
-            options: Object.assign(
-              {},
-              shouldUseRelativeAssetPaths ? { publicPath: "../../" } : undefined
-            )
-          },
-      {
-        loader: require.resolve("css-loader"),
-        options: { importLoaders: 2 }
-      },
-      {
-        loader: require.resolve("postcss-loader"),
-        options: {
-          ident: "postcss",
-          plugins: () => [
-            require("postcss-flexbugs-fixes"),
-            require("postcss-preset-env")({
-              autoprefixer: {
-                flexbox: "no-2009"
-              },
-              stage: 3
-            })
-          ],
-          sourceMap: shouldUseSourceMap
-        }
-      },
-      {
-        loader: require.resolve("less-loader"),
-        options: Object.assign(loaderOptions, {
-          source: shouldUseSourceMap
-        })
-      }
-    ];
+    const getLessLoader = cssOptions => {
+        return [
+            mode === 'dev'
+                ? require.resolve('style-loader')
+                : {
+                      loader: require('mini-css-extract-plugin').loader,
+                      options: Object.assign(
+                          {},
+                          shouldUseRelativeAssetPaths
+                              ? { publicPath: '../../' }
+                              : undefined
+                      ),
+                  },
+            {
+                loader: require.resolve('css-loader'),
+                options: cssOptions,
+            },
+            {
+                loader: require.resolve('postcss-loader'),
+                options: {
+                    ident: 'postcss',
+                    plugins: () => [
+                        require('postcss-flexbugs-fixes'),
+                        require('postcss-preset-env')({
+                            autoprefixer: {
+                                flexbox: 'no-2009',
+                            },
+                            stage: 3,
+                        }),
+                    ],
+                    sourceMap: shouldUseSourceMap,
+                },
+            },
+            {
+                loader: require.resolve('less-loader'),
+                options: Object.assign(loaderOptions, {
+                    source: shouldUseSourceMap,
+                }),
+            },
+        ]
+    }
 
     const loaders = config.module.rules.find(rule => Array.isArray(rule.oneOf))
-      .oneOf;
+        .oneOf
 
     // Insert less-loader as the penultimate item of loaders (before file-loader)
-    loaders.splice(loaders.length - 1, 0, {
-      test: /\.less$/,
-      use: lessLoader,
-      sideEffects: mode === "prod"
-    });
+    loaders.splice(
+        loaders.length - 1,
+        0,
+        {
+            test: lessRegex,
+            exclude: lessModuleRegex,
+            use: getLessLoader({
+                importLoaders: 2,
+            }),
+            sideEffects: mode === 'prod',
+        },
+        {
+            test: lessModuleRegex,
+            use: getLessLoader({
+                importLoaders: 2,
+                modules: true,
+                getLocalIdent: getCSSModuleLocalIdent,
+            }),
+        }
+    )
 
-    return config;
-  };
+    return config
+}
 
 const themer = lessToJs(
     fs.readFileSync(path.join(__dirname, '../config/antd-theme.less'), 'utf8')
@@ -70,6 +94,4 @@ const themer = lessToJs(
 
 const loaderOptions = { javascriptEnabled: true, modifyVars: themer }
 
-module.exports = addLessLoader(loaderOptions);
-
-
+module.exports = addLessLoader(loaderOptions)
