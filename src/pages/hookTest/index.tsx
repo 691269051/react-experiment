@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-04-23 10:02:34
+ * @Last Modified time: 2019-04-29 17:07:56
  */
 import React, {
     createContext,
@@ -45,7 +45,7 @@ export const reducer = (state: Istate, action: { type: string }) => {
 
 const ThemeContext = createContext({ color: 'red' })
 interface IinputProps {}
-const FancyInput: React.SFC<IinputProps> = (
+const FancyInput: React.FunctionComponent<IinputProps> = (
     props,
     ref: React.RefObject<{ focus: () => void }>
 ) => {
@@ -61,7 +61,7 @@ const FancyInput: React.SFC<IinputProps> = (
 }
 const FancyInputC = forwardRef(FancyInput)
 
-const HookTest: React.SFC<Iprops> = ({ path, name }) => {
+const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
     const [state, dispatch] = useReducer(reducer, initialState)

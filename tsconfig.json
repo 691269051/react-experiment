@@ -9,7 +9,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "lib": ["es6", "scripthost", "dom"],
+    "lib": ["esnext", "scripthost", "dom"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
