@@ -9,7 +9,7 @@
     {
       "files": [".prettierrc", ".*.json", "*.json"],
       "options": {
-        "printWidth": 80,
+        "printWidth": 20,
         "tabWidth": 2
       }
     }

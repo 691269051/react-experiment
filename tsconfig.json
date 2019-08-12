@@ -2,19 +2,25 @@
   "compilerOptions": {
     "baseUrl": "src",
     "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "scripthost",
+      "esnext"
+    ],
     "allowJs": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
+    // "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "lib": ["esnext", "scripthost", "dom"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "isolatedModules": true
+    "jsx": "react"
   },
   "exclude": [
     "node_modules",
@@ -23,5 +29,5 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": ["./src/**/*"]
+  "include": ["src"]
 }
