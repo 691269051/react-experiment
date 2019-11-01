@@ -13,7 +13,7 @@ module.exports = override(
     addAntd,
     addLodash,
     getConfig,
-    disableChunk(), // 禁用代码拆分,开启后打包成一个js文件
+    // disableChunk(), // 禁用代码拆分,开启后打包成一个js文件
     // addWebpackAlias,
     addBundleVisualizer,
     addHot
