@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-01-09 10:51:26
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-08-09 16:15:19
+ * @Last Modified time: 2019-11-01 16:21:13
  */
 import './index.css'
 
@@ -20,6 +20,10 @@ const onRenderCallback = (...arg: any[]) => {
     console.log('arg-----end---')
 }
 
+const rootElement = document.getElementById('root')
+
+ReactDOM.createRoot(rootElement).render(<App />)
+
 ReactDOM.render(
     <Provider store={store}>
         <React.StrictMode>
@@ -28,7 +32,7 @@ ReactDOM.render(
             </React.Profiler>
         </React.StrictMode>
     </Provider>,
-    document.getElementById('root')
+    rootElement
 )
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
