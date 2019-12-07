@@ -2,8 +2,9 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-04-29 17:07:56
+ * @Last Modified time: 2019-12-08 02:28:41
  */
+import { RootState, RootDispatch } from 'store'
 import React, {
     createContext,
     forwardRef,
@@ -18,6 +19,7 @@ import React, {
     useRef,
     useState,
 } from 'react'
+import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 
 import styles from './index.module.css'
 
@@ -68,6 +70,8 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
     const context = useContext(ThemeContext)
     const memo = useMemo(() => num ** num2, [num, num2])
     const inputRef = useRef<HTMLInputElement>(null)
+    const count = useSelector((state: RootState) => state.count, shallowEqual)
+    const dispatch2 = useDispatch<RootDispatch>()
     // const callBack = useCallback()
 
     const setNumCb = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -82,18 +86,12 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
         console.log(e.target)
         setNum2(num2 => num2 + 1)
     }
-
-    // FIXME:hooks错误使用示范, 测试tslint插件检测
-    // if (num > 12) {
-    //     const [a, setA] = useState<number>(0)
-    // }
-    //
     useEffect(() => {
         console.log(num, num2)
         return () => {
             console.log('卸载', num, num2)
         }
-    }, [])
+    }, [num, num2])
     // TODO: 带dom操作副作用的hooks
     useLayoutEffect(() => {
         document.title = `第 ${num} 页`
@@ -110,6 +108,14 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
             原始值${memo}`}
             <div style={{ color: 'blue' }}>{state.count}</div>
             <FancyInputC ref={inputRef} />
+            <div
+                style={{ color: 'red' }}
+                onClick={() => {
+                    dispatch2.count.add(1)
+                }}
+            >
+                {count}
+            </div>
             <button onClick={() => dispatch({ type: 'increment' })}>+</button>
             <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
         </div>

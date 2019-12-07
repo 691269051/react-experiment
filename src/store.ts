@@ -1,5 +1,6 @@
-import { init, RematchRootState } from '@rematch/core'
-import models from 'controller'
+import { init } from '@rematch/core'
+import * as models from 'controller'
+import { RematchRootDispatch, RematchRootState } from '@hardfist/rematch'
 
 const customDevtoolOptions = { disabled: false }
 export const store = init({
@@ -11,5 +12,6 @@ export const store = init({
 })
 
 export type Store = typeof store
-export type Dispatch = typeof store.dispatch
-export type iRootState = RematchRootState<typeof models>
+export type RootState = RematchRootState<typeof models>
+
+export type RootDispatch = RematchRootDispatch<typeof models>

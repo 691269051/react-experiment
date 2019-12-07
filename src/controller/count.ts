@@ -1,16 +1,16 @@
-import { createModel } from '@rematch/core'
+import { RootDispatch, RootState } from 'store'
 export type countState = number
-const count = {
+export const count = {
     state: 0,
     reducers: {
-        increment: (state: countState, payload: number): countState =>
-            state + payload,
+        add: (state: countState, payload: number): countState => {
+            debugger
+            return state + payload
+        },
     },
-    effects: (dispatch: any) => ({
-        incrementAsync: async (payload: number) => {
+    effects: (dispatch: RootDispatch) => ({
+        async incrementAsync(payload: number) {
             await new Promise(resolve => setTimeout(resolve, 2000))
         },
     }),
 }
-
-export default count
