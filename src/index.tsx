@@ -20,21 +20,19 @@ const onRenderCallback = (...arg: any[]) => {
     console.log('arg-----end---')
 }
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root') as HTMLElement
 
-ReactDOM.createRoot(rootElement).render(<App />)
-
-ReactDOM.render(
+ReactDOM.createRoot(rootElement).render(
     <Provider store={store}>
         <React.StrictMode>
             <React.Profiler id="application" onRender={onRenderCallback}>
                 <App />
             </React.Profiler>
         </React.StrictMode>
-    </Provider>,
-    rootElement
+    </Provider>
 )
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.register()
+serviceWorker.unregister()
