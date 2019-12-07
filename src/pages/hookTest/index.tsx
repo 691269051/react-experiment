@@ -8,9 +8,7 @@ import { RootState, RootDispatch } from 'store'
 import React, {
     createContext,
     forwardRef,
-    useCallback,
     useContext,
-    useDebugValue,
     useEffect,
     useImperativeHandle,
     useLayoutEffect,
@@ -92,7 +90,7 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
             console.log('卸载', num, num2)
         }
     }, [num, num2])
-    // TODO: 带dom操作副作用的hooks
+    // 带dom操作副作用的hooks
     useLayoutEffect(() => {
         document.title = `第 ${num} 页`
         console.log(12)
