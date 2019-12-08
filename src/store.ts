@@ -4,9 +4,9 @@ import * as models from 'controller'
 import { RematchRootDispatch, RematchRootState } from 'controller/util'
 const immer = immerPlugin()
 
-const customDevtoolOptions = { disabled: false }
+const customDevtoolOptions = { disabled: process.env.NODE_ENV === 'production' }
 export const store = init({
-    name: 'init',
+    // name: 'init',
     plugins: [immer],
     models,
     redux: {
