@@ -1,10 +1,13 @@
 import { init } from '@rematch/core'
+import immerPlugin from '@rematch/immer'
 import * as models from 'controller'
-import { RematchRootDispatch, RematchRootState } from '@hardfist/rematch'
+import { RematchRootDispatch, RematchRootState } from 'controller/util'
+const immer = immerPlugin()
 
 const customDevtoolOptions = { disabled: false }
 export const store = init({
-    // name: 'init',
+    name: 'init',
+    plugins: [immer],
     models,
     redux: {
         devtoolOptions: customDevtoolOptions,

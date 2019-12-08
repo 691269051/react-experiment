@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
 import * as serviceWorker from './serviceWorker'
-import App from './routers'
+import App from './router'
 import { store } from './store'
 
 const onRenderCallback = (...arg: any[]) => {
