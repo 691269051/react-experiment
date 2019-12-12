@@ -23,7 +23,7 @@
     "react-motion": "^0.5.2",
     "react-redux": "^7.1.3",
     "react-transition-group": "^4.3.0",
-    "react-use": "^13.12.1",
+    "react-use": "^13.12.2",
     "styled-components": "^4.4.1",
     "swr": "^0.1.13",
     "typescript": "^3.7.3"
@@ -31,7 +31,7 @@
   "scripts": {
     "analyz": "rm -rf ./build && react-app-rewired build --analyze",
     "format": "./node_modules/.bin/prettier --single-quote --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
-    "update": "yarn upgrade-interactive --latest",
+    "update": "yarn upgrade-interactive --latest && yarn yarn-deduplicate yarn.lock",
     "start": "react-app-rewired start",
     "server": "node ./server",
     "build": "rm -rf ./build && react-app-rewired build",
@@ -41,10 +41,10 @@
   "devDependencies": {
     "@hardfist/rematch": "^1.3.0",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^9.3.3",
     "@types/jest": "^24.0.23",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.16",
+    "@types/node": "^12.12.17",
     "@types/reach__router": "^1.2.6",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
@@ -63,7 +63,8 @@
     "react-hot-loader": "^4.12.18",
     "react-scripts": "3.3.0",
     "sas": "3.0.4",
-    "webpack-bundle-analyzer": "^3.6.0"
+    "webpack-bundle-analyzer": "^3.6.0",
+    "yarn-deduplicate": "^1.1.1"
   },
   "sideEffects": false,
   "eslintConfig": {
