@@ -1,60 +1,67 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Chrome",
-            "type": "chrome",
-            "request": "launch",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceRoot}/src",
-            "sourceMapPathOverrides": {
-                "webpack:///src/*": "${webRoot}/*"
-            }
-        },
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/src",
+      "userDataDir": false,
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    },
 
-        {
-            "name": "Debug CRA Tests",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable":
-                "${workspaceRoot}/node_modules/.bin/react-app-rewired",
-            "args": ["test", "--runInBand", "--no-cache", "--env=jsdom"],
-            "cwd": "${workspaceRoot}",
-            "protocol": "inspector",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "name": "开发编译调试",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable":
-                "${workspaceRoot}/node_modules/.bin/react-app-rewired",
-            "args": ["start"],
+    {
+      "name": "Debug CRA Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-app-rewired",
+      "args": [
+        "test",
+        "--runInBand",
+        "--no-cache",
+        "--env=jsdom"
+      ],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "开发编译调试",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-app-rewired",
+      "args": [
+        "start"
+      ],
 
-            "cwd": "${workspaceRoot}",
-            "protocol": "inspector",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "name": "生产编译调试",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable":
-                "${workspaceRoot}/node_modules/.bin/react-app-rewired",
-            "args": ["build"],
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "生产编译调试",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-app-rewired",
+      "args": [
+        "build"
+      ],
 
-            "cwd": "${workspaceRoot}",
-            "protocol": "inspector",
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "调试",
-            "program": "${workspaceFolder}/server/index.js"
-        },
-    ]
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "调试",
+      "program": "${workspaceFolder}/server/index.js"
+    }
+  ]
 }
