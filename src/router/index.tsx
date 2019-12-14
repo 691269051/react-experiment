@@ -4,11 +4,11 @@ import { hot } from 'react-hot-loader/root'
 import { Router } from '@reach/router'
 import HookTest from 'pages/hookTest'
 
-// const N404: React.SFC<{}> = () => {
+// const N404: React.FC<{}> = () => {
 //     return <div>404</div>
 // }
 
-const Routers: React.SFC<{}> = () => {
+const Routers: React.FC<{}> = () => {
     return (
         <Suspense fallback={<Loading />}>
             <Router>

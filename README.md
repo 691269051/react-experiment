@@ -3,7 +3,11 @@
 ## 创建 react 项目
 
 ```bash
-yarn create react-app my-app --typescript
+yarn create react-app my-app --template typescript
+```
+
+```bash
+npx create-react-app my-app --template typescript
 ```
 
 ## 启用 react 实验版本

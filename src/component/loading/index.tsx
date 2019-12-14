@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Loading: React.SFC<{}> = () => {
+const Loading: React.FC<{}> = () => {
     return <div>loading...</div>
 }
 

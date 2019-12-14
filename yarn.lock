@@ -933,7 +933,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.0", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6":
   version "7.7.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.6.tgz#d18c511121aff1b4f2cd1d452f1bac9601dd830f"
   integrity sha512-BWAJxpNVa0QlE5gZdWjSxXtemZyZ9RmrmVozxt3NUXeZhVIJ5ANyqmMc0JDrivBZyxUuQvFxlvH4OWWOogGfUw==
@@ -1382,10 +1382,10 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@testing-library/dom@^6.3.0":
-  version "6.10.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-6.10.1.tgz#da5bf5065d3f9e484aef4cc495f4e1a5bea6df2e"
-  integrity sha512-5BPKxaO+zSJDUbVZBRNf9KrmDkm/EcjjaHSg3F9+031VZyPACKXlwLBjVzZxheunT9m72DoIq7WvyE457/Xweg==
+"@testing-library/dom@^6.11.0":
+  version "6.11.0"
+  resolved "https://registry.npm.taobao.org/@testing-library/dom/download/@testing-library/dom-6.11.0.tgz#962a38f1a721fdb7c9e35e7579e33ff13a00eda4"
+  integrity sha1-lio48ach/bfJ4151eeM/8ToA7aQ=
   dependencies:
     "@babel/runtime" "^7.6.2"
     "@sheerun/mutationobserver-shim" "^0.3.2"
@@ -1409,14 +1409,14 @@
     pretty-format "^24.0.0"
     redent "^3.0.0"
 
-"@testing-library/react@^9.3.3":
-  version "9.3.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-9.3.3.tgz#87fe594adb02cba4d0e86369d025ea13ad570d7c"
-  integrity sha512-IuoiJR/NAzu9EuT3Fqs92sRHe/9egCipar92wTnXe3fMloWy0Q7JdAXaszzbv2ogH30ztb6Axp5XW63vOTd4jA==
+"@testing-library/react@^9.4.0":
+  version "9.4.0"
+  resolved "https://registry.npm.taobao.org/@testing-library/react/download/@testing-library/react-9.4.0.tgz?cache=0&sync_timestamp=1576252578594&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40testing-library%2Freact%2Fdownload%2F%40testing-library%2Freact-9.4.0.tgz#b021ac8cb987c8dc54c6841875f745bf9b2e88e5"
+  integrity sha1-sCGsjLmHyNxUxoQYdfdFv5suiOU=
   dependencies:
-    "@babel/runtime" "^7.6.0"
-    "@testing-library/dom" "^6.3.0"
-    "@types/testing-library__react" "^9.1.0"
+    "@babel/runtime" "^7.7.6"
+    "@testing-library/dom" "^6.11.0"
+    "@types/testing-library__react" "^9.1.2"
 
 "@types/babel__core@^7.1.0":
   version "7.1.3"
@@ -1602,10 +1602,10 @@
   dependencies:
     pretty-format "^24.3.0"
 
-"@types/testing-library__react@^9.1.0":
+"@types/testing-library__react@^9.1.2":
   version "9.1.2"
-  resolved "https://registry.yarnpkg.com/@types/testing-library__react/-/testing-library__react-9.1.2.tgz#e33af9124c60a010fc03a34eff8f8a34a75c4351"
-  integrity sha512-CYaMqrswQ+cJACy268jsLAw355DZtPZGt3Jwmmotlcu8O/tkoXBI6AeZ84oZBJsIsesozPKzWzmv/0TIU+1E9Q==
+  resolved "https://registry.npm.taobao.org/@types/testing-library__react/download/@types/testing-library__react-9.1.2.tgz#e33af9124c60a010fc03a34eff8f8a34a75c4351"
+  integrity sha1-4zr5EkxgoBD8A6NO/4+KNKdcQ1E=
   dependencies:
     "@types/react-dom" "*"
     "@types/testing-library__dom" "*"
@@ -1992,10 +1992,10 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^3.26.2:
-  version "3.26.2"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-3.26.2.tgz#3c6068612a1790bf0cd3049ada70e8efb8b7c53e"
-  integrity sha512-18wU3MYozJTWnHpehuPFJhOClrgLSdApubCn6KOCSgZYFD5Y0ZG59bR44Um5uxz/rIWA09gVwIAs62kJNcVZZg==
+antd@^3.26.3:
+  version "3.26.3"
+  resolved "https://registry.npm.taobao.org/antd/download/antd-3.26.3.tgz#046747567d25e381b1b298c3a5c5b970ed716a0d"
+  integrity sha1-BGdHVn0l44GxspjDpcW5cO1xag0=
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"
     "@ant-design/icons" "~2.1.1"
@@ -2018,8 +2018,8 @@ antd@^3.26.2:
     rc-cascader "~0.17.4"
     rc-checkbox "~2.1.6"
     rc-collapse "~1.11.3"
-    rc-dialog "~7.5.2"
-    rc-drawer "~3.0.0"
+    rc-dialog "~7.6.0"
+    rc-drawer "~3.1.1"
     rc-dropdown "~2.4.1"
     rc-editor-mention "^1.1.13"
     rc-form "^2.4.10"
@@ -2043,7 +2043,7 @@ antd@^3.26.2:
     rc-tree-select "~2.9.1"
     rc-trigger "^2.6.2"
     rc-upload "~2.9.1"
-    rc-util "^4.10.0"
+    rc-util "^4.16.1"
     react-lazy-load "^3.0.13"
     react-lifecycles-compat "^3.0.4"
     react-slick "~0.25.2"
@@ -9586,23 +9586,23 @@ rc-collapse@~1.11.3:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
 
-rc-dialog@~7.5.2:
-  version "7.5.14"
-  resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-7.5.14.tgz#3e85ed8a6f3ae17cf5082b590b9c366f70ebf5dc"
-  integrity sha512-gmEukl2iU2K74G2g66rVH6yOCwvLbVWqmEClbRO47Iec/stFyaDXCkvJmBb5vJcAWomQwaU4yZ9muRBW4u9AfA==
+rc-dialog@~7.6.0:
+  version "7.6.0"
+  resolved "https://registry.npm.taobao.org/rc-dialog/download/rc-dialog-7.6.0.tgz#6467b75f5b60038129bf2e1b003b264281949c09"
+  integrity sha1-ZGe3X1tgA4Epvy4bADsmQoGUnAk=
   dependencies:
     babel-runtime "6.x"
     rc-animate "2.x"
-    rc-util "^4.8.1"
+    rc-util "^4.16.1"
 
-rc-drawer@~3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/rc-drawer/-/rc-drawer-3.0.2.tgz#1c42b2b7790040344f8f05f1d132b1ef0e97b783"
-  integrity sha512-oPScGXB/8/ov9gEFLxPH8RBv/9jLTZboZtyF/GgrrnCAvbFwUxXdELH6n6XIowmuDKKvTGIMgZdnao0T46Yv3A==
+rc-drawer@~3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npm.taobao.org/rc-drawer/download/rc-drawer-3.1.1.tgz#25389488f3516b2af1f053eaf2574e3135ea265a"
+  integrity sha1-JTiUiPNRayrx8FPq8ldOMTXqJlo=
   dependencies:
     babel-runtime "^6.26.0"
     classnames "^2.2.6"
-    rc-util "^4.11.2"
+    rc-util "^4.16.1"
     react-lifecycles-compat "^3.0.4"
 
 rc-dropdown@~2.4.1:
@@ -9921,7 +9921,7 @@ rc-upload@~2.9.1:
     prop-types "^15.5.7"
     warning "4.x"
 
-rc-util@^4.0.4, rc-util@^4.1.1, rc-util@^4.10.0, rc-util@^4.11.2, rc-util@^4.13.0, rc-util@^4.15.3, rc-util@^4.15.7, rc-util@^4.3.0, rc-util@^4.4.0, rc-util@^4.5.0, rc-util@^4.5.1, rc-util@^4.6.0, rc-util@^4.8.1:
+rc-util@^4.0.4, rc-util@^4.1.1, rc-util@^4.13.0, rc-util@^4.15.3, rc-util@^4.15.7, rc-util@^4.16.1, rc-util@^4.3.0, rc-util@^4.4.0, rc-util@^4.5.0, rc-util@^4.5.1, rc-util@^4.6.0:
   version "4.16.1"
   resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-4.16.1.tgz#bf9070ab219a69624c047026a8c68f71225396a2"
   integrity sha512-nYwXV8hqOVpjpuCBckq57LM2W8HzfUGVm8xcbbHqH8SJeQk4EhLZY1mA/vJcEiz9Q1tN9ImrqengyF8FVc8ZJQ==
