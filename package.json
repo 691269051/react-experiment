@@ -29,12 +29,12 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
-    "analyz": "rm -rf ./build && react-app-rewired build --analyze",
+    "analyz": "react-app-rewired build --analyze",
     "format": "./node_modules/.bin/prettier --single-quote --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
     "update": "yarn upgrade-interactive --latest && yarn yarn-deduplicate yarn.lock",
     "start": "react-app-rewired start",
     "server": "node ./server",
-    "build": "rm -rf ./build && react-app-rewired build",
+    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "clean": "rm -rf ./node_modules && rm -rf ./yarn.lock"
   },
