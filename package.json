@@ -11,6 +11,7 @@
     "antd": "^3.26.4",
     "anujs": "^1.6.0",
     "classname": "^0.0.0",
+    "date-fns": "^2.8.1",
     "immer": "^5.1.0",
     "less": "3.10.3",
     "localforage": "^1.7.3",
