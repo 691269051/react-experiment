@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-12-08 02:28:41
+ * @Last Modified time: 2020-01-06 14:42:20
  */
 import { RootState, RootDispatch } from 'store'
 import React, {
@@ -101,6 +101,7 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
             <div style={context} className={styles.title} onClick={setNumCb}>
                 {num}{' '}
             </div>
+            <div>404</div>
             <div onClick={setNumCb2}>{num2} </div>
             {`最新值${num ** num2}
             原始值${memo}`}

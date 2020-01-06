@@ -5,6 +5,7 @@ const addLodash = require('./addLodash')
 const getConfig = require('./getConfig')
 const addBundleVisualizer = require('./addBundleVisualizer')
 const addHot = require('./addHot')
+const addReactRefresh = require('./addReactRefresh')
 // const addWebpackAlias = require('./addWebpackAlias')
 // const addPostcssPlugins = require('./addPostcssPlugins');
 
@@ -16,5 +17,5 @@ module.exports = override(
     // disableChunk(), // 禁用代码拆分,开启后打包成一个js文件
     // addWebpackAlias,
     addBundleVisualizer,
-    addHot
+    addReactRefresh
 )

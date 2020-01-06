@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react'
 import Loading from 'component/loading'
-import { hot } from 'react-hot-loader/root'
 import { Router } from '@reach/router'
 import HookTest from 'pages/hookTest'
 
@@ -18,6 +17,6 @@ const Routers: React.FC<{}> = () => {
         </Suspense>
     )
 }
-const App = hot(Routers)
+const App = Routers
 
 export default App
