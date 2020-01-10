@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-02-19 16:28:59
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2020-01-06 14:42:20
+ * @Last Modified time: 2020-01-08 14:25:40
  */
 import { RootState, RootDispatch } from 'store'
 import React, {
@@ -22,8 +22,7 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 import styles from './index.module.css'
 
 interface Iprops {
-    path: string
-    name: string
+    match?: Object
 }
 
 interface Istate {
@@ -61,7 +60,7 @@ const FancyInput: React.FunctionComponent<IinputProps> = (
 }
 const FancyInputC = forwardRef(FancyInput)
 
-const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
+const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -84,6 +83,14 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
         console.log(e.target)
         setNum2(num2 => num2 + 1)
     }
+
+    useEffect(() => {
+        console.log(match)
+        return () => {
+            console.log('delete' + match)
+        }
+    }, [match])
+
     useEffect(() => {
         console.log(num, num2)
         return () => {
@@ -101,7 +108,6 @@ const HookTest: React.FunctionComponent<Iprops> = ({ path, name }) => {
             <div style={context} className={styles.title} onClick={setNumCb}>
                 {num}{' '}
             </div>
-            <div>404</div>
             <div onClick={setNumCb2}>{num2} </div>
             {`最新值${num ** num2}
             原始值${memo}`}

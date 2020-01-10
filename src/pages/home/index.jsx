@@ -14,7 +14,6 @@ import _ from 'lodash'
 import styles from './home.module.css'
 import RanderProps from './RenderProps'
 
-// import { Link } from '@reach/router';
 const H1 = styled.h1`
     color: blue;
     height: ${props => props.num + 24}px;
@@ -91,7 +90,6 @@ class Home extends PureComponent {
                 {/* <Button onClick={get} type="dashed">
                     get data
                 </Button> */}
-                {/* </Link> */}
                 <Button type="primary" className="" onClick={this.addOne}>
                     加1
                 </Button>
@@ -130,7 +128,4 @@ const mapDispatchToProps = dispatch => {
         },
     }
 }
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

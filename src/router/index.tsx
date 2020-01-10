@@ -1,18 +1,45 @@
 import React, { Suspense } from 'react'
 import Loading from 'component/loading'
-import { Router } from '@reach/router'
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    useRouteMatch,
+} from 'react-router-dom'
 import HookTest from 'pages/hookTest'
+import RouterHook from 'pages/RouterHook'
 
-// const N404: React.FC<{}> = () => {
-//     return <div>404</div>
-// }
+import {} from 'react-router-dom'
+
+const NotFound: React.FC<{}> = () => {
+    return <div>404</div>
+}
+
+const Hook = () => {
+    let match = useRouteMatch({
+        path: '/BLOG/:slug/',
+        strict: true,
+        sensitive: true,
+    })
+    console.log(match)
+    return (
+        <div>
+            {/* ... */}
+            {match ? <HookTest match={match} /> : <NotFound />}
+        </div>
+    )
+}
 
 const Routers: React.FC<{}> = () => {
     return (
         <Suspense fallback={<Loading />}>
             <Router>
-                {/* <Home path="/" name="userState" /> */}
-                <HookTest path="/" name="hooksTest" />
+                <Switch>
+                    {/* <Hook /> */}
+                    <Route path="/routerhooktest">
+                        <RouterHook />
+                    </Route>
+                </Switch>
             </Router>
         </Suspense>
     )

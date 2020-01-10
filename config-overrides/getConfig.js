@@ -20,9 +20,8 @@ RegExp.prototype.toJSON = function(key) {
 
 module.exports = function getConfig(config) {
     // 本方法打印config,env到config.overrides.json文件
-    const mode = process.env.NODE_ENV === 'development' ? 'dev' : 'prod'
     writeFile(
-        `./config.overrides.${mode}.json`,
+        `./config.overrides.${process.env.NODE_ENV}.json`,
         // fs.createReadStream()
         JSON.stringify(config, null, 4)
     )
