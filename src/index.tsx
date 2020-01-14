@@ -2,7 +2,7 @@
  * @Author: 李雁辉
  * @Date: 2019-01-09 10:51:26
  * @Last Modified by: 李雁辉
- * @Last Modified time: 2019-11-01 16:21:13
+ * @Last Modified time: 2020-01-13 14:51:23
  */
 import './index.css'
 
@@ -14,10 +14,24 @@ import * as serviceWorker from './serviceWorker'
 import App from './router'
 import { store } from './store'
 
-const onRenderCallback = (...arg: any[]) => {
-    console.log('arg----start----')
-    console.log(arg)
-    console.log('arg-----end---')
+const onRenderCallback: React.ProfilerOnRenderCallback = (
+    id, // 发生提交的 Profiler 树的 “id”
+    phase, // "mount" （如果组件树刚加载） 或者 "update" （如果它重渲染了）之一
+    actualDuration, // 本次更新 committed 花费的渲染时间
+    baseDuration, // 估计不使用 memoization 的情况下渲染整颗子树需要的时间
+    startTime, // 本次更新中 React 开始渲染的时间
+    commitTime, // 本次更新中 React committed 的时间
+    interactions // 属于本次更新的 interactions 的集合
+) => {
+    console.log('application--Profiler----start----')
+    console.log(id)
+    console.log(phase)
+    console.log(actualDuration)
+    console.log(baseDuration)
+    console.log(startTime)
+    console.log(commitTime)
+    console.log(interactions)
+    console.log('application--Profiler-----end---')
 }
 
 const rootElement = document.getElementById('root') as HTMLElement

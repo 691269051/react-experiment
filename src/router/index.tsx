@@ -36,7 +36,7 @@ const Routers: React.FC<{}> = () => {
             <Router>
                 <Switch>
                     {/* <Hook /> */}
-                    <Route path="/routerhooktest">
+                    <Route path="/routerhooktest/:id">
                         <RouterHook />
                     </Route>
                 </Switch>

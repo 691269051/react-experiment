@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import {
     useParams,
     useLocation,
@@ -18,17 +18,35 @@ interface ILinkButton {
 const LinkButton: React.FC<ILinkButton> = ({ children, href, navigate }) => {
     // navigate()
     return (
-        <Button onClick={navigate} type="primary">
+        <Button href={href} onClick={navigate} type="primary">
             {children}
         </Button>
     )
 }
 const RouterHookContainer = () => {
+    const path = `/routerhooktest/${Math.random()}`
+    const { id } = useParams()
+    const match = useRouteMatch()
+    const location = useLocation()
+    const history = useHistory()
+    const [num2, setNum2] = useState<number>(1)
+    console.log(match)
+    console.log(location)
+    console.log(history)
     return (
         <div>
-            <Link to="/add/12" replace={true} component={LinkButton}>
-                goTo add/12
+            <Link to={path} replace={true} component={LinkButton}>
+                goTo {path}
             </Link>
+            id: {id}
+            <div
+                style={{ color: 'red' }}
+                onClick={() => {
+                    setNum2(num2 => num2 + 1)
+                }}
+            >
+                {num2}ss2dd34
+            </div>
         </div>
     )
 }
