@@ -4,18 +4,16 @@
  * @Last Modified by: 李雁辉
  * @Last Modified time: 2020-01-13 14:51:23
  */
-import './index.css'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-
-import * as serviceWorker from './serviceWorker'
+import './index.css'
 import App from './router'
+import * as serviceWorker from './serviceWorker'
 import { store } from './store'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
-    id, // 发生提交的 Profiler 树的 “id”
+    id, // 发生提交的 Profiler 树的 "id"
     phase, // "mount" （如果组件树刚加载） 或者 "update" （如果它重渲染了）之一
     actualDuration, // 本次更新 committed 花费的渲染时间
     baseDuration, // 估计不使用 memoization 的情况下渲染整颗子树需要的时间
