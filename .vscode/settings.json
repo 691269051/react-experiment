@@ -1,5 +1,9 @@
 {
   "javascript.implicitProjectConfig.checkJs": true,
   "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }
