@@ -7,6 +7,7 @@ import {
     useRouteMatch,
 } from 'react-router-dom'
 import HookTest from 'pages/hookTest'
+import BraftEditor from 'pages/BraftEditor'
 import RouterHook from 'pages/RouterHook'
 
 import {} from 'react-router-dom'
@@ -36,6 +37,9 @@ const Routers: React.FC<{}> = () => {
             <Router>
                 <Switch>
                     {/* <Hook /> */}
+                    <Route path="/BraftEditor">
+                        <BraftEditor />
+                    </Route>
                     <Route path="/routerhooktest/:id">
                         <RouterHook />
                     </Route>
