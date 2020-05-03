@@ -82,9 +82,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(List)
+export default connect(mapStateToProps, mapDispatchToProps)(List)
 
 // export default List;

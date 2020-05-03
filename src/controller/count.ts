@@ -9,7 +9,7 @@ export const count = {
     },
     effects: (dispatch: RootDispatch) => ({
         async incrementAsync() {
-            await new Promise(resolve => setTimeout(resolve, 2000))
+            await new Promise((resolve) => setTimeout(resolve, 2000))
             dispatch.count.add(1)
         },
     }),

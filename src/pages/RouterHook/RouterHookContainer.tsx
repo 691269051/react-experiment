@@ -42,7 +42,7 @@ const RouterHookContainer = () => {
             <div
                 style={{ color: 'red' }}
                 onClick={() => {
-                    setNum2(num2 => num2 + 1)
+                    setNum2((num2) => num2 + 1)
                 }}
             >
                 {num2}ss2dd34

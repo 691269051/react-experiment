@@ -76,12 +76,12 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
         if (inputRef.current !== null) {
             inputRef.current.focus()
         }
-        setNum(num => num + 1)
+        setNum((num) => num + 1)
     }
 
     const setNumCb2 = (e: React.MouseEvent) => {
         console.log(e.target)
-        setNum2(num2 => num2 + 1)
+        setNum2((num2) => num2 + 1)
     }
 
     useEffect(() => {

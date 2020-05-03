@@ -1,6 +1,6 @@
 export async function get() {
     // try {
-    let response = await fetch('/demo/test2ss').then(response => {
+    let response = await fetch('/demo/test2ss').then((response) => {
         let { status } = response
         console.log(status)
 

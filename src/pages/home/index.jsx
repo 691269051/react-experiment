@@ -16,8 +16,8 @@ import RanderProps from './RenderProps'
 
 const H1 = styled.h1`
     color: blue;
-    height: ${props => props.num + 24}px;
-    font-size: ${props => props.num + 24}px;
+    height: ${(props) => props.num + 24}px;
+    font-size: ${(props) => props.num + 24}px;
     line-height: 1.5;
     /* line-height:1; */
 `
@@ -70,7 +70,7 @@ class Home extends PureComponent {
         // console.log(this._state)
         this._setState &&
             this._setState.setState(
-                produce(draft => ({
+                produce((draft) => ({
                     index: draft.index + 1,
                 }))
             )
@@ -115,13 +115,13 @@ Home.propTypes = {
     count: PropTypes.number,
     addOne: PropTypes.func,
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         count: state.count,
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
         addOne: () => {
             dispatch.count.add(1)

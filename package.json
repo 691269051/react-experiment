@@ -32,7 +32,7 @@
   },
   "scripts": {
     "analyz": "react-app-rewired build --analyze",
-    "format": "./node_modules/.bin/prettier --single-quote --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
+    "format": "yarn prettier --end-of-line lf --single-quote --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
     "update": "yarn upgrade-interactive --latest && yarn yarn-deduplicate yarn.lock",
     "start": "react-app-rewired start",
     "server": "node ./server",
