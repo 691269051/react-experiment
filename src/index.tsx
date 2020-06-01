@@ -34,7 +34,7 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
 
 const rootElement = document.getElementById('root') as HTMLElement
 
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.unstable_createRoot(rootElement).render(
     <Provider store={store}>
         <React.StrictMode>
             <React.Profiler id="application" onRender={onRenderCallback}>
