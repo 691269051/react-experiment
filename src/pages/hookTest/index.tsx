@@ -4,10 +4,8 @@
  * @Last Modified by: 李雁辉
  * @Last Modified time: 2020-01-08 14:25:40
  */
-import { RootState, RootDispatch } from 'store'
 import React, {
     createContext,
-    forwardRef,
     useContext,
     useEffect,
     useImperativeHandle,
@@ -17,8 +15,8 @@ import React, {
     useRef,
     useState,
 } from 'react'
-import { useDispatch, useSelector, shallowEqual } from 'react-redux'
-
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { RootDispatch, RootState } from 'store'
 import styles from './index.module.css'
 
 interface Iprops {
@@ -44,7 +42,7 @@ export const reducer = (state: Istate, action: { type: string }) => {
 
 const ThemeContext = createContext({ color: 'red' })
 interface IinputProps {}
-const FancyInput: React.FunctionComponent<IinputProps> = (
+const FancyInput: React.FC<IinputProps> = (
     props,
     ref: React.RefObject<{ focus: () => void }>
 ) => {
@@ -58,7 +56,7 @@ const FancyInput: React.FunctionComponent<IinputProps> = (
     }))
     return <input ref={inputRef} />
 }
-const FancyInputC = forwardRef(FancyInput)
+// const FancyInputC = forwardRef(FancyInput)
 
 const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
     const [num, setNum] = useState<number>(0)
@@ -112,7 +110,7 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
             {`最新值${num ** num2}
             原始值${memo}`}
             <div style={{ color: 'blue' }}>{state.count}</div>
-            <FancyInputC ref={inputRef} />
+            {/* <FancyInputC ref={inputRef} /> */}
             <div
                 style={{ color: 'red' }}
                 onClick={() => {
