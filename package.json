@@ -26,6 +26,9 @@
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.1",
     "react-use": "^15.1.1",
+    "slate": "^0.58.4",
+    "slate-history": "^0.58.4",
+    "slate-react": "^0.58.4",
     "styled-components": "^5.1.1",
     "swr": "^0.2.2",
     "typescript": "^3.9.3"

@@ -1,16 +1,15 @@
-import React, { Suspense } from 'react'
 import Loading from 'component/loading'
+import BraftEditor from 'pages/BraftEditor'
+import HookTest from 'pages/hookTest'
+import RouterHook from 'pages/RouterHook'
+import Slate from 'pages/Slate'
+import React, { Suspense } from 'react'
 import {
     BrowserRouter as Router,
     Route,
     Switch,
     useRouteMatch,
 } from 'react-router-dom'
-import HookTest from 'pages/hookTest'
-import BraftEditor from 'pages/BraftEditor'
-import RouterHook from 'pages/RouterHook'
-
-import {} from 'react-router-dom'
 
 const NotFound: React.FC<{}> = () => {
     return <div>404</div>
@@ -40,6 +39,10 @@ const Routers: React.FC<{}> = () => {
                     <Route path="/BraftEditor">
                         <BraftEditor />
                     </Route>
+                    <Route path="/Slate">
+                        <Slate />
+                    </Route>
+
                     <Route path="/routerhooktest/:id">
                         <RouterHook />
                     </Route>
