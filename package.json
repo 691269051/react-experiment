@@ -82,6 +82,7 @@
     "react-scripts": "3.4.1",
     "sas": "3.0.4",
     "serve": "^11.3.1",
+    "vscode-web-custom-data": "^0.3.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "yarn-deduplicate": "^2.0.0"
   },

@@ -1,0 +1,27 @@
+{
+  "version": 1.1,
+  "properties": [
+    {
+      "name": "foo",
+      "description": "哈哈哈哈"
+    }
+  ],
+  "atDirectives": [
+    {
+      "name": "@foo",
+      "description": "Foo at directive"
+    }
+  ],
+  "pseudoClasses": [
+    {
+      "name": ":foo",
+      "description": "Foo pseudo class"
+    }
+  ],
+  "pseudoElements": [
+    {
+      "name": "::foo",
+      "description": "Foo pseudo elements"
+    }
+  ]
+}

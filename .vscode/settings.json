@@ -5,5 +5,11 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": false
   },
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "css.customData": [
+    "./shi.css-data.json"
+  ],
+  "html.customData": [
+    "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
+  ]
 }

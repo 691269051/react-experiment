@@ -4,4 +4,6 @@
 
 .show {
     color: @primary-color;
+    display: flex;
+    height: 20px;
 }

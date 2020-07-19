@@ -14549,6 +14549,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vscode-web-custom-data@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npm.taobao.org/vscode-web-custom-data/download/vscode-web-custom-data-0.3.0.tgz#0f607d23c977a75ddcb0cb315417bd4f87bdf418"
+  integrity sha1-D2B9I8l3p13csMsxVBe9T4e99Bg=
+
 w3c-hr-time@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz#0a89cdf5cc15822df9c360543676963e0cc308cd"
