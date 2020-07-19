@@ -3,7 +3,25 @@
   "properties": [
     {
       "name": "foo",
-      "description": "哈哈哈哈"
+      "relevance": 18,
+      "values": [
+        {
+          "name": "center",
+          "description": "大大方方付付"
+        },
+        {
+          "name": "flex-end",
+          "description": "Lines 大大方方付付."
+        },
+        {
+          "name": "flex-start",
+          "description": "大大方方付付."
+        }
+      ],
+      "description": "哈哈哈哈",
+      "restrictions": [
+        "enum"
+      ]
     }
   ],
   "atDirectives": [
