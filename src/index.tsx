@@ -4,13 +4,14 @@
  * @Last Modified by: 李雁辉
  * @Last Modified time: 2020-01-13 14:51:23
  */
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './router'
 import * as serviceWorker from './serviceWorker'
 import { store } from './store'
+import Loading from 'component/loading'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
     id, // 发生提交的 Profiler 树的 "id"
@@ -34,12 +35,23 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
 
 const rootElement = document.getElementById('root') as HTMLElement
 
+// ReactDOM.unstable_createRoot(rootElement).render(
+//     <Provider store={store}>
+//         <React.StrictMode>
+//             <React.Profiler id="application" onRender={onRenderCallback}>
+//                 <div>13</div>
+//                 {/* <App /> */}
+//             </React.Profiler>
+//         </React.StrictMode>
+//     </Provider>
+// )
+
 ReactDOM.unstable_createRoot(rootElement).render(
     <Provider store={store}>
         <React.StrictMode>
-            <React.Profiler id="application" onRender={onRenderCallback}>
+            <Suspense fallback={<Loading />}>
                 <App />
-            </React.Profiler>
+            </Suspense>
         </React.StrictMode>
     </Provider>
 )

@@ -1,7 +1,9 @@
 {
   "javascript.implicitProjectConfig.checkJs": true,
+  "typescript.suggest.paths": true,
+  "javascript.suggest.paths": true,
   "git.ignoreLimitWarning": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": false
   },
@@ -11,5 +13,6 @@
   ],
   "html.customData": [
     "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
-  ]
+  ],
+  "commentTranslate.targetLanguage": "zh-CN"
 }

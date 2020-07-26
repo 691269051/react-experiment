@@ -6,12 +6,13 @@
  */
 import { Button } from 'antd'
 import produce from 'immer'
+import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import _ from 'lodash'
 import styles from './home.module.css'
+import './index2.css'
 import RanderProps from './RenderProps'
 
 const H1 = styled.h1`
@@ -85,24 +86,30 @@ class Home extends PureComponent {
         return (
             <div className={styles.ddd}>
                 <div style={{ color: 'red' }}>dddd1234</div>
-                <h1>{count}</h1>
+                <h1 className="adh1">{count}</h1>
                 {/* <h2>dddd</h2> */}
                 {/* <Button onClick={get} type="dashed">
                     get data
                 </Button> */}
-                <Button type="primary" className="" onClick={this.addOne}>
+                '-'
+                <Button
+                    type="primary"
+                    className="aaa csd"
+                    onClick={this.addOne}
+                >
                     加1
                 </Button>
                 <H1 num={count}>實驗1</H1>
                 {this.props.children}
+                <Button />
                 <RanderProps>
                     {(state, props, setState) => {
                         this._setState = setState
                         this._state = state
                         return (
-                            <div className={styles.show}>
+                            <H1 className={styles.show}>
                                 RanderProps {state.index}
-                            </div>
+                            </H1>
                         )
                     }}
                 </RanderProps>

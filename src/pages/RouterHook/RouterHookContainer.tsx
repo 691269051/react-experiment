@@ -2,10 +2,11 @@ import { Button } from 'antd'
 import React, { useState } from 'react'
 import {
     Link,
-    useHistory,
+    useNavigate,
     useLocation,
     useParams,
-    useRouteMatch,
+    useMatch,
+    Outlet,
 } from 'react-router-dom'
 import { ReactComponent as Excel } from './icon.svg'
 
@@ -26,16 +27,13 @@ const LinkButton: React.FC<ILinkButton> = ({ children, href, navigate }) => {
 const RouterHookContainer = () => {
     const path = `/routerhooktest/${Math.random()}`
     const { id } = useParams()
-    const match = useRouteMatch()
     const location = useLocation()
-    const history = useHistory()
+    const navigate = useNavigate()
     const [num2, setNum2] = useState<number>(1)
-    console.log(match)
-    console.log(location)
-    console.log(history)
+    console.log(location, Outlet)
     return (
         <div>
-            <Link to={path} replace={true} component={LinkButton}>
+            <Link to={path} replace={true}>
                 goTo {path}
             </Link>
             id: {id}

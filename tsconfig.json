@@ -1,4 +1,5 @@
 {
+  "extends": "./path.json",
   "compilerOptions": {
     "baseUrl": "src",
     "target": "es5",
@@ -10,7 +11,6 @@
     ],
     "allowJs": false,
     "skipLibCheck": true,
-    // "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -23,5 +23,8 @@
     "jsx": "react",
     "strictNullChecks": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "src/**/*.css"
+  ]
 }
