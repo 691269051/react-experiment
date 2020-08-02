@@ -5,9 +5,14 @@
   "semi": false,
   "singleQuote": true,
   "useTabs": false,
+  "endOfLine": "lf",
   "overrides": [
     {
-      "files": [".prettierrc", ".*.json", "*.json"],
+      "files": [
+        ".prettierrc",
+        ".*.json",
+        "*.json"
+      ],
       "options": {
         "printWidth": 20,
         "tabWidth": 2

@@ -8,6 +8,7 @@ import {
     useMatch,
     Outlet,
 } from 'react-router-dom'
+import useSWR from 'swr'
 import { ReactComponent as Excel } from './icon.svg'
 
 interface ILinkButton {
@@ -30,6 +31,21 @@ const RouterHookContainer = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const [num2, setNum2] = useState<number>(1)
+    const { data, isValidating, error } = useSWR(
+        'http://www.baidu.com',
+        async (url) => {
+            const data = await fetch(url)
+                .then((data) => {
+                    return data?.json()
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+
+            return data ?? null
+        },
+        { suspense: true }
+    )
     console.log(location, Outlet)
     return (
         <div>
