@@ -8,6 +8,7 @@ import { withHistory } from 'slate-history'
 const PlainTextExample = () => {
     const [value, setValue] = useState(initialValue)
     const editor = useMemo(() => withHistory(withReact(createEditor())), [])
+    console.log('value', value)
     return (
         <Slate
             editor={editor}

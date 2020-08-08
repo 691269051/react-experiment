@@ -22,36 +22,38 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
     commitTime, // 本次更新中 React committed 的时间
     interactions // 属于本次更新的 interactions 的集合
 ) => {
-    console.log('application--Profiler----start----')
-    console.log(id)
-    console.log(phase)
-    console.log(actualDuration)
-    console.log(baseDuration)
-    console.log(startTime)
-    console.log(commitTime)
-    console.log(interactions)
-    console.log('application--Profiler-----end---')
+    // console.log('application--Profiler----start----')
+    // console.log(id)
+    // console.log(phase)
+    // console.log(actualDuration)
+    // console.log(baseDuration)
+    // console.log(startTime)
+    // console.log(commitTime)
+    // console.log(interactions)
+    // console.log('application--Profiler-----end---')
 }
 
 const rootElement = document.getElementById('root') as HTMLElement
 
-// ReactDOM.unstable_createRoot(rootElement).render(
+// ReactDOM.render(
 //     <Provider store={store}>
 //         <React.StrictMode>
 //             <React.Profiler id="application" onRender={onRenderCallback}>
-//                 <div>13</div>
-//                 {/* <App /> */}
+//                 <App />
 //             </React.Profiler>
 //         </React.StrictMode>
-//     </Provider>
+//     </Provider>,
+//     rootElement
 // )
 
 ReactDOM.unstable_createRoot(rootElement).render(
     <Provider store={store}>
         <React.StrictMode>
-            <Suspense fallback={<Loading />}>
-                <App />
-            </Suspense>
+            <React.Profiler id="application" onRender={onRenderCallback}>
+                <Suspense fallback={<Loading />}>
+                    <App />
+                </Suspense>
+            </React.Profiler>
         </React.StrictMode>
     </Provider>
 )
