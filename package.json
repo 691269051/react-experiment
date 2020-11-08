@@ -81,7 +81,7 @@
     "prettier": "^2.0.5",
     "react-app-rewired": "2.1.6",
     "react-refresh": "^0.8.3",
-    "react-scripts": "3.4.1",
+    "react-scripts": "4.0.0",
     "sas": "3.0.4",
     "serve": "^11.3.1",
     "vscode-web-custom-data": "^0.3.0",
