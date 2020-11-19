@@ -9,7 +9,7 @@ const addReactRefresh = require('./addReactRefresh')
 // const addPostcssPlugins = require('./addPostcssPlugins');
 
 module.exports = override(
-    addReactRefresh,
+    // addReactRefresh,
     addLessLoader,
     addAntd,
     addLodash,

@@ -35,18 +35,7 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
 
 const rootElement = document.getElementById('root') as HTMLElement
 
-// ReactDOM.render(
-//     <Provider store={store}>
-//         <React.StrictMode>
-//             <React.Profiler id="application" onRender={onRenderCallback}>
-//                 <App />
-//             </React.Profiler>
-//         </React.StrictMode>
-//     </Provider>,
-//     rootElement
-// )
-
-ReactDOM.unstable_createRoot(rootElement).render(
+ReactDOM.render(
     <Provider store={store}>
         <React.StrictMode>
             <React.Profiler id="application" onRender={onRenderCallback}>
@@ -55,8 +44,21 @@ ReactDOM.unstable_createRoot(rootElement).render(
                 </Suspense>
             </React.Profiler>
         </React.StrictMode>
-    </Provider>
+    </Provider>,
+    rootElement
 )
+
+// ReactDOM.unstable_createRoot(rootElement).render(
+//     <Provider store={store}>
+//         <React.StrictMode>
+//             <React.Profiler id="application" onRender={onRenderCallback}>
+//                 <Suspense fallback={<Loading />}>
+//                     <App />
+//                 </Suspense>
+//             </React.Profiler>
+//         </React.StrictMode>
+//     </Provider>
+// )
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
