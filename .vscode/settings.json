@@ -15,6 +15,5 @@
     "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
   ],
   "commentTranslate.targetLanguage": "zh-CN",
-  "editor.snippetSuggestions": "bottom",
   "editor.suggest.snippetsPreventQuickSuggestions": false
 }

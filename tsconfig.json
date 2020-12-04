@@ -5,26 +5,23 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "scripthost",
       "esnext"
     ],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "newLine": "LF",
+    "jsx": "react-jsx",
     "strictNullChecks": true
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.css"
-  ]
+  "include": ["src"]
 }

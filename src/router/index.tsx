@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import BraftEditor from 'pages/BraftEditor'
 import HookTest from 'pages/hookTest'
 import RouterHook from 'pages/RouterHook'
@@ -16,10 +16,14 @@ const NotFound: React.FC<{}> = () => {
     return <div>404</div>
 }
 
-const Hook = () => {
+const Hook = (): JSX.Element => {
     let match = useMatch({
         path: '/BLOG/:slug/',
     })
+
+    const ddd = useCallback((): void => {
+        console.log(match)
+    }, [match])
     return (
         <div>
             {/* ... */}

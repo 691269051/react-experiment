@@ -4,12 +4,10 @@ const addAntd = require('./addAntd')
 const addLodash = require('./addLodash')
 const getConfig = require('./getConfig')
 const addBundleVisualizer = require('./addBundleVisualizer')
-const addReactRefresh = require('./addReactRefresh')
 // const addWebpackAlias = require('./addWebpackAlias')
 // const addPostcssPlugins = require('./addPostcssPlugins');
 
 module.exports = override(
-    // addReactRefresh,
     addLessLoader,
     addAntd,
     addLodash,

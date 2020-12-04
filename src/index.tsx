@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './router'
-import * as serviceWorker from './serviceWorker'
+import reportWebVitals from './reportWebVitals'
 import { store } from './store'
 import Loading from 'component/loading'
 
@@ -35,7 +35,7 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
 
 const rootElement = document.getElementById('root') as HTMLElement
 
-ReactDOM.render(
+const app = (
     <Provider store={store}>
         <React.StrictMode>
             <React.Profiler id="application" onRender={onRenderCallback}>
@@ -44,23 +44,19 @@ ReactDOM.render(
                 </Suspense>
             </React.Profiler>
         </React.StrictMode>
-    </Provider>,
-    rootElement
+    </Provider>
 )
 
-// ReactDOM.unstable_createRoot(rootElement).render(
-//     <Provider store={store}>
-//         <React.StrictMode>
-//             <React.Profiler id="application" onRender={onRenderCallback}>
-//                 <Suspense fallback={<Loading />}>
-//                     <App />
-//                 </Suspense>
-//             </React.Profiler>
-//         </React.StrictMode>
-//     </Provider>
-// )
+ReactDOM.render(app, rootElement)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister()
+// ReactDOM.unstable_createRoot(rootElement).render(app)
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const log = (...arg: any[]) => {
+    console.log('========PWA START========')
+    console.log(arg)
+    console.log('========PWA END========')
+}
+reportWebVitals(log)
