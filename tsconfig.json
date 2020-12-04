@@ -19,7 +19,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "newLine": "LF",
     "jsx": "react-jsx",
     "strictNullChecks": true
   },
