@@ -1,3 +1,1 @@
-export const ddd = () => {
-    console.log('asdsad')
-}
+export { lineClamp } from './lineClamp'

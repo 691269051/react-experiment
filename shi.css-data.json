@@ -27,19 +27,19 @@
   "atDirectives": [
     {
       "name": "@foo",
-      "description": "Foo at directive"
+      "description": "Foo at 带动的"
     }
   ],
   "pseudoClasses": [
     {
       "name": ":foo",
-      "description": "Foo pseudo class"
+      "description": "啛啛喳喳"
     }
   ],
   "pseudoElements": [
     {
       "name": "::foo",
-      "description": "Foo pseudo elements"
+      "description": "大得多"
     }
   ]
 }
