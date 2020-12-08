@@ -20,7 +20,7 @@ const onRenderCallback: React.ProfilerOnRenderCallback = (
     baseDuration, // 估计不使用 memoization 的情况下渲染整颗子树需要的时间
     startTime, // 本次更新中 React 开始渲染的时间
     commitTime, // 本次更新中 React committed 的时间
-    interactions // 属于本次更新的 interactions 的集合
+    interactions, // 属于本次更新的 interactions 的集合
 ) => {
     // console.log('application--Profiler----start----')
     // console.log(id)
@@ -54,9 +54,9 @@ ReactDOM.render(app, rootElement)
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-const log = (...arg: any[]) => {
-    console.log('========PWA START========')
+const log = (arg: any) => {
+    console.log('========WebVitals START========')
     console.log(arg)
-    console.log('========PWA END========')
+    console.log('========WebVitals END========')
 }
 reportWebVitals(log)

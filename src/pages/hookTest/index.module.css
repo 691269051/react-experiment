@@ -2,4 +2,5 @@
     line-height: 1;
     height: 20px;
     flex: 1;
+    background-image: url(./icon.svg);
 }

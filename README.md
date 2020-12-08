@@ -10,6 +10,8 @@ yarn create react-app my-app --template typescript
 npx create-react-app my-app --template typescript
 ```
 
+cra-template-pwa-typescript
+
 ## 启用 react 实验版本
 
 ```bash
