@@ -41,6 +41,7 @@ const Routers: React.FC<{}> = () => {
                         <BraftEditor />
                     </Route> */}
                 <Route path="/Slate" element={<Slate />} />
+                <Route path="/hooktest" element={<HookTest />} />
                 <Route
                     key="12"
                     path="/routerhooktest"

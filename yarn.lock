@@ -9,11 +9,6 @@
   dependencies:
     "@ctrl/tinycolor" "^3.1.6"
 
-"@ant-design/css-animation@^1.7.2":
-  version "1.7.3"
-  resolved "https://registry.npm.taobao.org/@ant-design/css-animation/download/@ant-design/css-animation-1.7.3.tgz?cache=0&sync_timestamp=1596107229407&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ant-design%2Fcss-animation%2Fdownload%2F%40ant-design%2Fcss-animation-1.7.3.tgz#60a1c970014e86b28f940510d69e503e428f1136"
-  integrity sha1-YKHJcAFOhrKPlAUQ1p5QPkKPETY=
-
 "@ant-design/icons-svg@^4.0.0":
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/@ant-design/icons-svg/download/@ant-design/icons-svg-4.1.0.tgz#480b025f4b20ef7fe8f47d4a4846e4fee84ea06c"
@@ -2456,10 +2451,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*", "@types/jest@^26.0.15":
-  version "26.0.16"
-  resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.16.tgz?cache=0&sync_timestamp=1606859604290&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.16.tgz#b47abd50f6ed0503f589db8e126fc8eb470cf87c"
-  integrity sha1-tHq9UPbtBQP1iduOEm/I60cM+Hw=
+"@types/jest@*", "@types/jest@^26.0.17":
+  version "26.0.17"
+  resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-26.0.17.tgz?cache=0&sync_timestamp=1607399300561&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.17.tgz#c63b44af7528bbc05974dfacc2c90fe13ed5534d"
+  integrity sha1-xjtEr3Uou8BZdN+swskP4T7VU00=
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -3196,13 +3191,12 @@ ansi-to-html@^0.6.11:
   dependencies:
     entities "^1.1.2"
 
-antd@^4.8.4:
-  version "4.9.1"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-4.9.1.tgz?cache=0&sync_timestamp=1606799690605&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-4.9.1.tgz#486c6e143e04fbd6e110a9ed9f9333bcba54b0f3"
-  integrity sha1-SGxuFD4E+9bhEKntn5MzvLpUsPM=
+antd@^4.9.2:
+  version "4.9.2"
+  resolved "https://registry.npm.taobao.org/antd/download/antd-4.9.2.tgz?cache=0&sync_timestamp=1607330717677&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-4.9.2.tgz#382a409187fc2e5395ad4b1769bd7a0ec8da62f9"
+  integrity sha1-OCpAkYf8LlOVrUsXab16DsjaYvk=
   dependencies:
     "@ant-design/colors" "^5.0.0"
-    "@ant-design/css-animation" "^1.7.2"
     "@ant-design/icons" "^4.3.0"
     "@ant-design/react-slick" "~0.27.0"
     "@babel/runtime" "^7.11.2"
@@ -5618,10 +5612,10 @@ date-fns@^2.15.0, date-fns@^2.16.1:
   resolved "https://registry.npm.taobao.org/date-fns/download/date-fns-2.16.1.tgz?cache=0&sync_timestamp=1598884225872&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdate-fns%2Fdownload%2Fdate-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
   integrity sha1-BXdXksPzMx2oEq8lPhqTWFHTg0s=
 
-dayjs@^1.8.30, dayjs@^1.9.6:
-  version "1.9.6"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.6.tgz?cache=0&sync_timestamp=1604990379187&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.6.tgz#6f0c77d76ac1ff63720dd1197e5cb87b67943d70"
-  integrity sha1-bwx312rB/2NyDdEZfly4e2eUPXA=
+dayjs@^1.8.30, dayjs@^1.9.7:
+  version "1.9.7"
+  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.7.tgz?cache=0&sync_timestamp=1607178626180&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.7.tgz#4b260bb17dceed2d5f29038dfee03c65a6786fc0"
+  integrity sha1-SyYLsX3O7S1fKQON/uA8ZaZ4b8A=
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -7956,10 +7950,10 @@ human-signals@^1.1.1:
   resolved "https://registry.npm.taobao.org/human-signals/download/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha1-xbHNFPUK6uCatsWf5jujOV/k36M=
 
-husky@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.npm.taobao.org/husky/download/husky-4.3.0.tgz?cache=0&sync_timestamp=1606817775887&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-4.3.0.tgz#0b2ec1d66424e9219d359e26a51c58ec5278f0de"
-  integrity sha1-Cy7B1mQk6SGdNZ4mpRxY7FJ48N4=
+husky@^4.3.5:
+  version "4.3.5"
+  resolved "https://registry.npm.taobao.org/husky/download/husky-4.3.5.tgz?cache=0&sync_timestamp=1607327472989&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-4.3.5.tgz#ab8d2a0eb6b62fef2853ee3d442c927d89290902"
+  integrity sha1-q40qDra2L+8oU+49RCySfYkpCQI=
   dependencies:
     chalk "^4.0.0"
     ci-info "^2.0.0"
@@ -9534,10 +9528,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.5.1:
-  version "10.5.2"
-  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.2.tgz#acfaa0093af3262aee3130b2e22438941530bdd1"
-  integrity sha1-rPqgCTrzJiruMTCy4iQ4lBUwvdE=
+lint-staged@^10.5.3:
+  version "10.5.3"
+  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-10.5.3.tgz?cache=0&sync_timestamp=1607094322510&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flint-staged%2Fdownload%2Flint-staged-10.5.3.tgz#c682838b3eadd4c864d1022da05daa0912fb1da5"
+  integrity sha1-xoKDiz6t1Mhk0QItoF2qCRL7HaU=
   dependencies:
     chalk "^4.1.0"
     cli-truncate "^2.1.0"
@@ -12398,10 +12392,10 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-app-rewired@2.1.6:
-  version "2.1.6"
-  resolved "https://registry.npm.taobao.org/react-app-rewired/download/react-app-rewired-2.1.6.tgz#33ee3076a7f34d6a7c94e649cac67e7c8c580de8"
-  integrity sha1-M+4wdqfzTWp8lOZJysZ+fIxYDeg=
+react-app-rewired@2.1.7:
+  version "2.1.7"
+  resolved "https://registry.npm.taobao.org/react-app-rewired/download/react-app-rewired-2.1.7.tgz#b229d32b93b076059e62b06e8117109b92599e18"
+  integrity sha1-sinTK5OwdgWeYrBugRcQm5JZnhg=
   dependencies:
     semver "^5.6.0"
 
