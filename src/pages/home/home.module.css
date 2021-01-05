@@ -3,7 +3,7 @@
 }
 
 .show {
-    color: @primary-color;
+    /* color: @primary-color; */
     display: flex;
     height: 20px;
     background-image: url();
