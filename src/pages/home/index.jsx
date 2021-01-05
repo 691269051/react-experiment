@@ -14,6 +14,7 @@ import styled from 'styled-components'
 import styles from './home.module.css'
 import './index2.css'
 import RanderProps from './RenderProps'
+import moduleName from 'components/List'
 
 const H1 = styled.h1`
     color: blue;
@@ -73,7 +74,7 @@ class Home extends PureComponent {
             this._setState.setState(
                 produce((draft) => ({
                     index: draft.index + 1,
-                }))
+                })),
             )
     }
 

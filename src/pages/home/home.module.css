@@ -6,4 +6,6 @@
     color: @primary-color;
     display: flex;
     height: 20px;
+    background-image: url();
+    display: flex;
 }

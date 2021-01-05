@@ -11,7 +11,7 @@ import './index.css'
 import App from './router'
 import reportWebVitals from './reportWebVitals'
 import { store } from './store'
-import Loading from 'component/loading'
+import Loading from 'components/loading'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
     id, // 发生提交的 Profiler 树的 "id"

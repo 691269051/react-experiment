@@ -19,3 +19,14 @@ yarn add react@experimental react-dom@experimental
 ```
 
 ## storybook
+
+## 自定义 css 提示
+
+```json
+"css.customData": [
+    "./shi.css-data.json"
+  ],
+  "html.customData": [
+    "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
+  ],
+```
