@@ -8054,10 +8054,10 @@ immer@^5.0.0:
   resolved "https://registry.npm.taobao.org/immer/download/immer-5.3.6.tgz#51eab8cbbeb13075fe2244250f221598818cac04"
   integrity sha1-Ueq4y76xMHX+IkQlDyIVmIGMrAQ=
 
-immer@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.npm.taobao.org/immer/download/immer-8.0.0.tgz#08763549ba9dd7d5e2eb4bec504a8315bd9440c2"
-  integrity sha1-CHY1Sbqd19Xi60vsUEqDFb2UQMI=
+immer@^8.0.0, immer@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.npm.taobao.org/immer/download/immer-8.0.1.tgz#9c73db683e2b3975c424fb0572af5889877ae656"
+  integrity sha1-nHPbaD4rOXXEJPsFcq9YiYd65lY=
 
 immutable@*:
   version "3.8.2"
