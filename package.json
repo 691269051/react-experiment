@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@rematch/core": "^1.4.0",

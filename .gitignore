@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-config-overrides/config.overrides.*.json
+config-overrides/customize-cra.*.*
 
 # testing
 /coverage
