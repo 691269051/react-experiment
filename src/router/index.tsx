@@ -4,39 +4,18 @@ import HookTest from 'pages/hookTest'
 import RouterHook from 'pages/RouterHook'
 import Slate from 'pages/Slate'
 
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    useMatch,
-    Outlet,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import Redirect from './Redirect'
 
 const NotFound: React.FC<{}> = () => {
     return <div>404</div>
-}
-
-const Hook = (): JSX.Element => {
-    let match = useMatch({
-        path: '/BLOG/:slug/',
-    })
-
-    const ddd = useCallback((): void => {
-        console.log(match)
-    }, [match])
-    return (
-        <div>
-            {/* ... */}
-            {match ? <HookTest match={match} /> : <NotFound />}
-        </div>
-    )
 }
 
 const Routers: React.FC<{}> = () => {
     return (
         <Router>
             <Routes>
-                <Hook />
                 {/* <Route path="/BraftEditor">
                         <BraftEditor />
                     </Route> */}
@@ -47,6 +26,8 @@ const Routers: React.FC<{}> = () => {
                     path="/routerhooktest"
                     element={<RouterHook />}
                 />
+                <Redirect path="/" to="login" />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     )
