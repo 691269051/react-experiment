@@ -1,13 +1,11 @@
-import { init } from '@rematch/core'
+import { init, RematchDispatch, RematchRootState } from '@rematch/core'
 import immerPlugin from '@rematch/immer'
-import * as models from 'controller'
-import { RematchRootDispatch, RematchRootState } from 'controller/util'
-const immer = immerPlugin()
+import { models, RootModel } from 'controller'
 
 const customDevtoolOptions = { disabled: process.env.NODE_ENV === 'production' }
 export const store = init({
     // name: 'init',
-    plugins: [immer],
+    plugins: [immerPlugin<RootModel>()],
     models,
     redux: {
         devtoolOptions: customDevtoolOptions,
@@ -15,6 +13,5 @@ export const store = init({
 })
 
 export type Store = typeof store
-export type RootState = RematchRootState<typeof models>
-
-export type RootDispatch = RematchRootDispatch<typeof models>
+export type Dispatch = RematchDispatch<RootModel>
+export type RootState = RematchRootState<RootModel>

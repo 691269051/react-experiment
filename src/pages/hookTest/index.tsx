@@ -17,7 +17,7 @@ import React, {
     useState,
 } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import { RootDispatch, RootState } from 'store'
+import { Dispatch, RootState } from 'store'
 import styles from './index.module.css'
 
 interface Iprops {
@@ -67,7 +67,7 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
     const memo = useMemo(() => num ** num2, [num, num2])
     const inputRef = useRef<HTMLInputElement>(null)
     const count = useSelector((state: RootState) => state.count, shallowEqual)
-    const dispatch2 = useDispatch<RootDispatch>()
+    const dispatch2 = useDispatch<Dispatch>()
     // const callBack = useCallback()
 
     const setNumCb = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -115,7 +115,8 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
             <div
                 style={{ color: 'red' }}
                 onClick={() => {
-                    dispatch2.count.add(1)
+                    // dispatch2.count.add(1)
+                    dispatch2.count.incrementAsync()
                 }}
             >
                 {count}

@@ -10,7 +10,7 @@ yarn create react-app my-app --template typescript
 npx create-react-app my-app --template typescript
 ```
 
-cra-template-pwa-typescript
+--template pwa-typescript
 
 ## 启用 react 实验版本
 
@@ -30,3 +30,7 @@ yarn add react@experimental react-dom@experimental
     "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
   ],
 ```
+
+## 备用依赖
+
+@hardfist/rematch
