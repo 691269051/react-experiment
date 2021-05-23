@@ -18,7 +18,7 @@ import React, {
 } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { Dispatch, RootState } from 'store'
-import styles from './index.module.css'
+import styles from './index.module.less'
 
 interface Iprops {
     match?: Object
