@@ -1,5 +1,5 @@
 {
-  "javascript.implicitProjectConfig.checkJs": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
   "typescript.suggest.paths": true,
   "javascript.suggest.paths": true,
   "git.ignoreLimitWarning": true,
