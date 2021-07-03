@@ -15,7 +15,11 @@ import React, {
     useReducer,
     useRef,
     useState,
+    unstable_LegacyHidden as LegacyHidden,
+    unstable_Offscreen as Offscreen,
 } from 'react'
+
+import { flushSync } from 'react-dom'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { Dispatch, RootState } from 'store'
 import styles from './index.module.less'
@@ -30,7 +34,7 @@ interface Istate {
 
 const initialState: Istate = { count: 0 }
 
-export const reducer = (state: Istate, action: { type: string }) => {
+export const number3 = (state: Istate, action: { type: string }) => {
     switch (action.type) {
         case 'increment':
             return { count: state.count + 1 }
@@ -43,10 +47,7 @@ export const reducer = (state: Istate, action: { type: string }) => {
 
 const ThemeContext = createContext({ color: 'red' })
 interface IinputProps {}
-const FancyInput: React.ForwardRefRenderFunction<
-    { focus: () => void },
-    IinputProps
-> = (props, ref) => {
+const FancyInput: React.ForwardRefRenderFunction<{ focus: () => void }, IinputProps> = (props, ref) => {
     const inputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => ({
         focus: () => {
@@ -62,7 +63,7 @@ const FancyInputC = forwardRef(FancyInput)
 const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
     const [num, setNum] = useState<number>(0)
     const [num2, setNum2] = useState<number>(0)
-    const [state, dispatch] = useReducer(reducer, initialState)
+    const [state, dispatch] = useReducer(number3, initialState)
     const context = useContext(ThemeContext)
     const memo = useMemo(() => num ** num2, [num, num2])
     const inputRef = useRef<HTMLInputElement>(null)
@@ -78,8 +79,7 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
         setNum((num) => num + 1)
     }
 
-    const setNumCb2 = (e: React.MouseEvent) => {
-        console.log(e.target)
+    const setNumCb2 = (e?: React.MouseEvent) => {
         setNum2((num2) => num2 + 1)
     }
 
@@ -91,11 +91,11 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
     }, [match])
 
     useEffect(() => {
-        console.log(num, num2)
+        console.log(num, num2, state)
         return () => {
-            console.log('卸载', num, num2)
+            console.log('卸载', num, num2, state)
         }
-    }, [num, num2])
+    }, [num, num2, state])
     // 带dom操作副作用的hooks
     useLayoutEffect(() => {
         document.title = `第 ${num} 页`
@@ -121,7 +121,15 @@ const HookTest: React.FunctionComponent<Iprops> = ({ match }) => {
             >
                 {count}
             </div>
-            <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+            <button
+                onClick={() => {
+                    // flushSync(() => dispatch({ type: 'increment' }))
+                    dispatch({ type: 'increment' })
+                    setNumCb2()
+                }}
+            >
+                +
+            </button>
             <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
         </div>
     )

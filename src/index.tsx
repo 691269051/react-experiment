@@ -47,10 +47,7 @@ const app = (
         </React.StrictMode>
     </Provider>
 )
-
-ReactDOM.render(app, rootElement)
-
-// ReactDOM.unstable_createRoot(rootElement).render(app)
+ReactDOM.createRoot(rootElement).render(app)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
