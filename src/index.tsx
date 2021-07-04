@@ -12,7 +12,7 @@ import App from './router'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import { store } from './store'
-import Loading from 'rcnext/src/components/loading'
+import Loading from 'rcnext/components/loading'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
     id, // 发生提交的 Profiler 树的 "id"
