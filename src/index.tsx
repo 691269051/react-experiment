@@ -12,7 +12,7 @@ import App from './router'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import { store } from './store'
-import Loading from 'components/loading'
+import Loading from 'rcnext/src/components/loading'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
     id, // 发生提交的 Profiler 树的 "id"
@@ -54,9 +54,7 @@ ReactDOM.createRoot(rootElement).render(app)
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register({
     onUpdate: (registration) => {
-        console.info(
-            `${registration} onUpdate registration?.waiting?.postMessage${registration?.waiting?.postMessage}`,
-        )
+        console.info(`${registration} onUpdate registration?.waiting?.postMessage${registration?.waiting?.postMessage}`)
         registration?.waiting?.postMessage({ type: 'SKIP_WAITING' })
         const reload = window.confirm('网站有了新的更新,请升级!')
         if (reload) {

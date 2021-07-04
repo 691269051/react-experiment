@@ -15,8 +15,8 @@ import React, {
     useReducer,
     useRef,
     useState,
-    unstable_LegacyHidden as LegacyHidden,
-    unstable_Offscreen as Offscreen,
+    // unstable_LegacyHidden as LegacyHidden,
+    // unstable_Offscreen as Offscreen,
 } from 'react'
 
 import { flushSync } from 'react-dom'
