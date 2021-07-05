@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
-import React from 'react'
+
 import './list.css'
 class List extends React.Component {
     constructor(props) {
@@ -16,9 +16,7 @@ class List extends React.Component {
    * 添加一个元素
    */
     handleAdd() {
-        const newItems = this.state.items.concat([
-            window.prompt('Enter some text'),
-        ])
+        const newItems = this.state.items.concat([window.prompt('Enter some text')])
         this.setState({ items: newItems })
     }
 

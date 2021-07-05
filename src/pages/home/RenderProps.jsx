@@ -1,5 +1,3 @@
-import React from 'react'
-
 class RenderProps extends React.Component {
     state = {
         index: 0,

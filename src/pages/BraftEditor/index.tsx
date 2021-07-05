@@ -35,11 +35,7 @@ export default class EditorDemo extends React.Component {
         const { editorState } = this.state
         return (
             <div className="my-component">
-                <BraftEditor
-                    value={editorState}
-                    onChange={this.handleEditorChange}
-                    onSave={this.submitContent}
-                />
+                <BraftEditor value={editorState} onChange={this.handleEditorChange} onSave={this.submitContent} />
             </div>
         )
     }
