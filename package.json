@@ -18,6 +18,8 @@
     "less": "4.1.1",
     "localforage": "^1.9.0",
     "lodash": "^4.17.21",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.0.0-alpha-ed6c091fe-20210701",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dnd": "^14.0.2",
@@ -50,6 +52,7 @@
     "workbox-streams": "^6.1.5"
   },
   "scripts": {
+    "postinstall": "patch-package",
     "analyz": "react-app-rewired build --analyze",
     "format": "yarn prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
     "update": "yarn upgrade-interactive --latest && yarn yarn-deduplicate yarn.lock",

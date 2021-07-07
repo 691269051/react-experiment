@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-dev-utils/getCSSModuleLocalIdent.js b/node_modules/react-dev-utils/getCSSModuleLocalIdent.js
+index ce25305..55c75e6 100644
+--- a/node_modules/react-dev-utils/getCSSModuleLocalIdent.js
++++ b/node_modules/react-dev-utils/getCSSModuleLocalIdent.js
+@@ -18,7 +18,7 @@ module.exports = function getLocalIdent(
+ ) {
+   // Use the filename or folder name, based on some uses the index.js / index.module.(css|scss|sass) project style
+   const fileNameOrFolder = context.resourcePath.match(
+-    /index\.module\.(css|scss|sass)$/
++    /index\.module\.(css|scss|sass|less)$/
+   )
+     ? '[folder]'
+     : '[name]';
