@@ -72,7 +72,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:11.0.0"],
             ["localforage", "npm:1.9.0"],
             ["lodash", "npm:4.17.21"],
-            ["patch-package", "npm:6.4.7"],
             ["postinstall-postinstall", "npm:2.1.0"],
             ["prettier", "npm:2.3.2"],
             ["react", "npm:18.0.0-alpha-ed6c091fe-20210701"],
@@ -11883,16 +11882,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["find-yarn-workspace-root", [
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/find-yarn-workspace-root-npm-2.0.0-e58a501607-fa5ca8f9d0.zip/node_modules/find-yarn-workspace-root/",
-          "packageDependencies": [
-            ["find-yarn-workspace-root", "npm:2.0.0"],
-            ["micromatch", "npm:4.0.4"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["flat-cache", [
         ["npm:3.0.4", {
           "packageLocation": "./.yarn/cache/flat-cache-npm-3.0.4-ee77e5911e-4fdd10ecbc.zip/node_modules/flat-cache/",
@@ -14891,16 +14880,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["klaw-sync", [
-        ["npm:6.0.0", {
-          "packageLocation": "./.yarn/cache/klaw-sync-npm-6.0.0-251c1a2fa5-0da397f896.zip/node_modules/klaw-sync/",
-          "packageDependencies": [
-            ["klaw-sync", "npm:6.0.0"],
-            ["graceful-fs", "npm:4.2.6"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["kleur", [
         ["npm:3.0.3", {
           "packageLocation": "./.yarn/cache/kleur-npm-3.0.3-f6f53649a4-df82cd1e17.zip/node_modules/kleur/",
@@ -16660,15 +16639,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["os-tmpdir", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/os-tmpdir-npm-1.0.2-e305b0689b-5666560f7b.zip/node_modules/os-tmpdir/",
-          "packageDependencies": [
-            ["os-tmpdir", "npm:1.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["p-each-series", [
         ["npm:2.2.0", {
           "packageLocation": "./.yarn/cache/p-each-series-npm-2.2.0-b9907a1ae6-5fbe2f1f19.zip/node_modules/p-each-series/",
@@ -16911,28 +16881,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/pascalcase-npm-0.1.1-d04964fcda-f83681c3c8.zip/node_modules/pascalcase/",
           "packageDependencies": [
             ["pascalcase", "npm:0.1.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["patch-package", [
-        ["npm:6.4.7", {
-          "packageLocation": "./.yarn/cache/patch-package-npm-6.4.7-7adb01df65-f36d5324da.zip/node_modules/patch-package/",
-          "packageDependencies": [
-            ["patch-package", "npm:6.4.7"],
-            ["@yarnpkg/lockfile", "npm:1.1.0"],
-            ["chalk", "npm:2.4.2"],
-            ["cross-spawn", "npm:6.0.5"],
-            ["find-yarn-workspace-root", "npm:2.0.0"],
-            ["fs-extra", "npm:7.0.1"],
-            ["is-ci", "npm:2.0.0"],
-            ["klaw-sync", "npm:6.0.0"],
-            ["minimist", "npm:1.2.5"],
-            ["open", "npm:7.4.2"],
-            ["rimraf", "npm:2.7.1"],
-            ["semver", "npm:5.7.1"],
-            ["slash", "npm:2.0.0"],
-            ["tmp", "npm:0.0.33"]
           ],
           "linkType": "HARD",
         }]
@@ -19668,7 +19616,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:11.0.0"],
             ["localforage", "npm:1.9.0"],
             ["lodash", "npm:4.17.21"],
-            ["patch-package", "npm:6.4.7"],
             ["postinstall-postinstall", "npm:2.1.0"],
             ["prettier", "npm:2.3.2"],
             ["react", "npm:18.0.0-alpha-ed6c091fe-20210701"],
@@ -21619,13 +21566,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["slash", [
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/slash-npm-2.0.0-69009eac54-512d435073.zip/node_modules/slash/",
-          "packageDependencies": [
-            ["slash", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/slash-npm-3.0.0-b87de2279a-94a93fff61.zip/node_modules/slash/",
           "packageDependencies": [
@@ -22923,16 +22863,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tiny-warning-npm-1.0.3-750b7a07c4-da62c4acac.zip/node_modules/tiny-warning/",
           "packageDependencies": [
             ["tiny-warning", "npm:1.0.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["tmp", [
-        ["npm:0.0.33", {
-          "packageLocation": "./.yarn/cache/tmp-npm-0.0.33-bcbf65df2a-902d7aceb7.zip/node_modules/tmp/",
-          "packageDependencies": [
-            ["tmp", "npm:0.0.33"],
-            ["os-tmpdir", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]
