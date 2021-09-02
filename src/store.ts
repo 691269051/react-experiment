@@ -1,6 +1,6 @@
 import { init, RematchDispatch, RematchRootState } from '@rematch/core'
 import immerPlugin from '@rematch/immer'
-import { models, RootModel } from 'src/controller'
+import { models, RootModel } from 'rcnext/controller'
 
 const customDevtoolOptions = { disabled: process.env.NODE_ENV === 'production' }
 export const store = init({

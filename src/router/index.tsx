@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
-import BraftEditor from 'src/pages/BraftEditor'
-import HookTest from 'src/pages/hookTest'
-import RouterHook from 'src/pages/RouterHook'
-import Slate from 'src/pages/Slate'
+import BraftEditor from 'rcnext/pages/BraftEditor'
+import HookTest from 'rcnext/pages/hookTest'
+import RouterHook from 'rcnext/pages/RouterHook'
+import Slate from 'rcnext/pages/Slate'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 

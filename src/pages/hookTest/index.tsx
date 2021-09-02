@@ -21,7 +21,7 @@ import React, {
 
 import { flushSync } from 'react-dom'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
-import { Dispatch, RootState } from 'store'
+import { Dispatch, RootState } from 'rcnext/store'
 import styles from './index.module.less'
 
 interface Iprops {

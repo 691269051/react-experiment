@@ -11,7 +11,7 @@ import './index.css'
 import App from './router'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
-import { store } from 'rcnest/store'
+import { store } from 'rcnext/store'
 import Loading from './components/loading'
 
 const onRenderCallback: React.ProfilerOnRenderCallback = (
