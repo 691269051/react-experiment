@@ -8,6 +8,7 @@
     "@reduxjs/toolkit": "^1.6.0",
     "@rematch/core": "^2.0.1",
     "@rematch/immer": "^2.0.1",
+    "@use-gesture/react": "^10.0.0-beta.22",
     "antd": "^4.16.6",
     "anujs": "^1.7.5",
     "braft-editor": "^2.3.9",
@@ -28,6 +29,7 @@
     "react-motion": "^0.5.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^6.0.0-beta.0",
+    "react-spring": "^9.2.4",
     "react-transition-group": "^4.4.2",
     "react-use": "^17.2.4",
     "recoil": "^0.3.1",
@@ -53,6 +55,9 @@
     "workbox-streams": "^6.1.5"
   },
   "scripts": {
+    "preinstall": "yarn node ./preddd.js",
+    "ddd": "yarn node ./ddd.js",
+    "postddd": "yarn node ./postddd.js",
     "analyz": "react-app-rewired build --analyze",
     "format": "yarn prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,less,md}",
     "vscode": "yarn dlx @yarnpkg/sdks vscode",
