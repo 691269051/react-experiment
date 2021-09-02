@@ -19,7 +19,7 @@
     "less": "4.1.1",
     "localforage": "^1.9.0",
     "lodash": "^4.17.21",
-    "postinstall-postinstall": "^2.1.0",
+    "rcnext": "link:./src",
     "react": "^18.0.0-alpha-ed6c091fe-20210701",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dnd": "^14.0.2",
@@ -50,8 +50,7 @@
     "workbox-range-requests": "^6.1.5",
     "workbox-routing": "^6.1.5",
     "workbox-strategies": "^6.1.5",
-    "workbox-streams": "^6.1.5",
-    "rcnext": "link:./src"
+    "workbox-streams": "^6.1.5"
   },
   "scripts": {
     "analyz": "react-app-rewired build --analyze",

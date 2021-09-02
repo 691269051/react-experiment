@@ -75,8 +75,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loader-utils", "npm:2.0.0"],
             ["localforage", "npm:1.9.0"],
             ["lodash", "npm:4.17.21"],
-            ["postinstall-postinstall", "npm:2.1.0"],
             ["prettier", "npm:2.3.2"],
+            ["rcnext", "link:./src::locator=rcnext%40workspace%3A."],
             ["react", "npm:18.0.0-alpha-ed6c091fe-20210701"],
             ["react-addons-css-transition-group", "virtual:6a2f738e9f7cb8450028df9abc18e6f943bbc0dd777f9de2d6a666b10bb2335c451492f4facb30309442632fe0b104f5af8384ea6bb8535c6afe81886d69d4a9#npm:15.6.2"],
             ["react-app-rewired", "virtual:6a2f738e9f7cb8450028df9abc18e6f943bbc0dd777f9de2d6a666b10bb2335c451492f4facb30309442632fe0b104f5af8384ea6bb8535c6afe81886d69d4a9#npm:2.1.8"],
@@ -18139,15 +18139,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["postinstall-postinstall", [
-        ["npm:2.1.0", {
-          "packageLocation": "./.yarn/unplugged/postinstall-postinstall-npm-2.1.0-42587988a7/node_modules/postinstall-postinstall/",
-          "packageDependencies": [
-            ["postinstall-postinstall", "npm:2.1.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["prelude-ls", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.1.2-a0daac0886-c4867c8748.zip/node_modules/prelude-ls/",
@@ -19643,10 +19634,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["rcnext", [
+        ["link:./src::locator=rcnext%40workspace%3A.", {
+          "packageLocation": "./src/",
+          "packageDependencies": [
+            ["rcnext", "link:./src::locator=rcnext%40workspace%3A."]
+          ],
+          "linkType": "SOFT",
+          "discardFromLookup": true
+        }],
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
-            ["rcnext", "workspace:."],
             ["@babel/helper-builder-react-jsx", "npm:7.14.5"],
             ["@babel/helper-builder-react-jsx-experimental", "npm:7.12.11"],
             ["@reduxjs/toolkit", "virtual:6a2f738e9f7cb8450028df9abc18e6f943bbc0dd777f9de2d6a666b10bb2335c451492f4facb30309442632fe0b104f5af8384ea6bb8535c6afe81886d69d4a9#npm:1.6.1"],
@@ -19687,8 +19685,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loader-utils", "npm:2.0.0"],
             ["localforage", "npm:1.9.0"],
             ["lodash", "npm:4.17.21"],
-            ["postinstall-postinstall", "npm:2.1.0"],
             ["prettier", "npm:2.3.2"],
+            ["rcnext", "link:./src::locator=rcnext%40workspace%3A."],
             ["react", "npm:18.0.0-alpha-ed6c091fe-20210701"],
             ["react-addons-css-transition-group", "virtual:6a2f738e9f7cb8450028df9abc18e6f943bbc0dd777f9de2d6a666b10bb2335c451492f4facb30309442632fe0b104f5af8384ea6bb8535c6afe81886d69d4a9#npm:15.6.2"],
             ["react-app-rewired", "virtual:6a2f738e9f7cb8450028df9abc18e6f943bbc0dd777f9de2d6a666b10bb2335c451492f4facb30309442632fe0b104f5af8384ea6bb8535c6afe81886d69d4a9#npm:2.1.8"],
