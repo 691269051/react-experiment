@@ -5425,7 +5425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.15.0, date-fns@npm:^2.23.0":
+"date-fns@npm:^2.15.0":
   version: 2.23.0
   resolution: "date-fns@npm:2.23.0"
   checksum: 485216d550255a548552db16379e7a5cd440e262b90fbdc0362f63ee71d0e74bd00ce29ca8d76b343f6df36c1ecb6f22edba0b72848a4c32674e755619695c1f
@@ -12851,7 +12851,6 @@ __metadata:
     colors: ^1.4.0
     cross-env: ^7.0.3
     customize-cra: ^1.0.0
-    date-fns: ^2.23.0
     dayjs: ^1.10.6
     dotenv-cli: ^4.0.0
     express: ^4.17.1
