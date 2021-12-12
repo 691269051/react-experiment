@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/.yarn/*
+!/.yarn/plugins
 /.pnp
 .pnp.js
 config-overrides/customize-cra.*.*

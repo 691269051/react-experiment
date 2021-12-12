@@ -12,13 +12,10 @@ const GoTo: FC<Props> = ({ to }) => {
     useEffect(() => {
         navigate(to, { replace: true })
     })
-    return null
+    return <></>
 }
 
-const Redirect: FC<Props> = ({ path, to }) => {
-    if (!path) {
-        return <GoTo path={path} to={to} />
-    }
+const Redirect: FC<Props> = ({ path = '/', to }) => {
     return <Route path={path} element={<GoTo path={path} to={to} />} />
 }
 export default Redirect
