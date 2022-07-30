@@ -1,0 +1,13 @@
+diff --git a/getCSSModuleLocalIdent.js b/getCSSModuleLocalIdent.js
+index ce25305e7ef3f80969670676a8f4985c76836b82..55c75e695b9c5088ee09596b8a39d753348f1e7d 100644
+--- a/getCSSModuleLocalIdent.js
++++ b/getCSSModuleLocalIdent.js
+@@ -18,7 +18,7 @@ module.exports = function getLocalIdent(
+ ) {
+   // Use the filename or folder name, based on some uses the index.js / index.module.(css|scss|sass) project style
+   const fileNameOrFolder = context.resourcePath.match(
+-    /index\.module\.(css|scss|sass)$/
++    /index\.module\.(css|scss|sass|less)$/
+   )
+     ? '[folder]'
+     : '[name]';

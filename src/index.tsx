@@ -5,7 +5,7 @@
  * @Last Modified time: 2020-01-13 14:51:23
  */
 import React, { Suspense } from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import './index.css'
 import App from './router'
@@ -54,9 +54,7 @@ ReactDOM.createRoot(rootElement).render(app)
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register({
     onUpdate: (registration) => {
-        console.info(
-            `${registration} onUpdate registration?.waiting?.postMessage${registration?.waiting?.postMessage}`,
-        )
+        console.info(`${registration} onUpdate registration?.waiting?.postMessage${registration?.waiting?.postMessage}`)
         registration?.waiting?.postMessage({ type: 'SKIP_WAITING' })
         const reload = window.confirm('网站有了新的更新,请升级!')
         if (reload) {

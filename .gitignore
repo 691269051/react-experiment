@@ -2,10 +2,7 @@
 
 # dependencies
 /node_modules
-/.yarn/*
-!/.yarn/plugins
-/.pnp
-.pnp.js
+/.yarn/unplugged
 config-overrides/customize-cra.*.*
 
 # testing

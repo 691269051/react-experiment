@@ -1,7 +1,7 @@
 const lessToJs = require('less-vars-to-js')
 const fs = require('fs')
 const path = require('path')
-const getCSSModuleLocalIdent = require('./getCssModuleLocalIdent')
+const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent')
 
 const { addLessLoader } = require('customize-cra')
 

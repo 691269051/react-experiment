@@ -1,5 +1,3 @@
-import type { CSSProperties, FC } from 'react'
-
 import { useEffect, useState, useRef } from 'react'
 
 import produce from 'immer'
@@ -15,24 +13,25 @@ function isWebKit(): boolean {
 
 interface props {
     lineClamp: number
-    style: CSSProperties
+    style: React.CSSProperties
     Wrap: unknown
+    children:React.ReactNode
 }
 
-const one: CSSProperties = {
+const one: React.CSSProperties = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
 }
 
-const more: CSSProperties = {
+const more: React.CSSProperties = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     WebkitBoxOrient: 'vertical',
     // WebkitLineClamp:'',
 }
 
-const useCreateStyle: (lineClamp: number) => CSSProperties = (lineClamp) => {
+const useCreateStyle: (lineClamp: number) => React.CSSProperties = (lineClamp) => {
     if (lineClamp === 1) {
         return one
     }
@@ -46,7 +45,7 @@ const useCreateStyle: (lineClamp: number) => CSSProperties = (lineClamp) => {
     return {}
 }
 
-const Text: FC<props> = ({
+const Text: React.FC<props> = ({
     lineClamp,
     children,
     style,
