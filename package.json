@@ -90,6 +90,7 @@
     "sas": "3.0.4",
     "serve": "^14.0.1",
     "vite": "^3.0.4",
+    "vite-plugin-pwa": "^0.12.3",
     "vscode-web-custom-data": "^0.3.6"
   },
   "sideEffects": false,
