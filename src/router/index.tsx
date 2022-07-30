@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
-import BraftEditor from 'pages/BraftEditor'
-import HookTest from 'pages/hookTest'
-import RouterHook from 'pages/RouterHook'
-import Slate from 'pages/Slate'
+// import BraftEditor from '@uw/rcnext/pages/BraftEditor'
+// import HookTest from '@uw/rcnext/pages/hookTest'
+import RouterHook from '../pages/RouterHook'
+// import Slate from '@uw/rcnext/pages/Slate'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -19,15 +19,11 @@ const Routers: React.FC<{}> = () => {
                 {/* <Route path="/BraftEditor">
                         <BraftEditor />
                     </Route> */}
-                <Route path="/Slate" element={<Slate />} />
-                <Route path="/hooktest" element={<HookTest />} />
-                <Route
-                    key="12"
-                    path="/routerhooktest"
-                    element={<RouterHook />}
-                />
-                <Redirect path="/" to="login" />
-                <Route path="*" element={<NotFound />} />
+                {/* <Route path="/Slate" element={<Slate />} />
+                <Route path="/hooktest" element={<HookTest />} /> */}
+                <Route key="12" path="/routerhooktest" element={<RouterHook />} />
+                {/* <Redirect path="/" to="login" /> */}
+                {/* <Route path="*" element={<NotFound />} /> */}
             </Routes>
         </Router>
     )

@@ -1,13 +1,6 @@
 import { Button } from 'antd'
 import React, { useState } from 'react'
-import {
-    Link,
-    useNavigate,
-    useLocation,
-    useParams,
-    useMatch,
-    Outlet,
-} from 'react-router-dom'
+import { Link, useNavigate, useLocation, useParams, useMatch, Outlet } from 'react-router-dom'
 import useSWR from 'swr'
 import { ReactComponent as Excel } from './icon.svg'
 
@@ -44,7 +37,7 @@ const RouterHookContainer = () => {
 
             return data ?? null
         },
-        { suspense: true }
+        { suspense: true },
     )
     console.log(location, Outlet)
     return (
@@ -60,7 +53,7 @@ const RouterHookContainer = () => {
                 }}
             >
                 <Excel />
-                {num2}dd
+                {num2}ddd
             </div>
         </div>
     )
