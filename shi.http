@@ -1,0 +1,20 @@
+curl 'https://api.cognitive.microsofttranslator.com/translate?from=en&to=zh-CHS&api-version=3.0&includeSentenceLength=true' \
+  -H 'authority: api.cognitive.microsofttranslator.com' \
+  -H 'accept: */*' \
+  -H 'accept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6' \
+  -H 'authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJyZWdpb24iOiJnbG9iYWwiLCJzdWJzY3JpcHRpb24taWQiOiI2ZjY1YjliY2JkNjA0ZDg4ODhiZWI2M2I4MTM4ODZlZSIsInByb2R1Y3QtaWQiOiJUZXh0VHJhbnNsYXRvci5TMyIsImNvZ25pdGl2ZS1zZXJ2aWNlcy1lbmRwb2ludCI6Imh0dHBzOi8vYXBpLmNvZ25pdGl2ZS5taWNyb3NvZnQuY29tL2ludGVybmFsL3YxLjAvIiwiYXp1cmUtcmVzb3VyY2UtaWQiOiIvc3Vic2NyaXB0aW9ucy84MWZjMTU3Yi0zMDdlLTRjMjEtOWY3MS0zM2QxMDMwNGRmMzMvcmVzb3VyY2VHcm91cHMvRWRnZV9UcmFuc2xhdGVfUkcvcHJvdmlkZXJzL01pY3Jvc29mdC5Db2duaXRpdmVTZXJ2aWNlcy9hY2NvdW50cy9UcmFuc2xhdGUiLCJzY29wZSI6Imh0dHBzOi8vYXBpLm1pY3Jvc29mdHRyYW5zbGF0b3IuY29tLyIsImF1ZCI6InVybjptcy5taWNyb3NvZnR0cmFuc2xhdG9yIiwiZXhwIjoxNjY0MDM4MTkzLCJpc3MiOiJ1cm46bXMuY29nbml0aXZlc2VydmljZXMifQ.s21Ile9tA0qd5dCW9BeauVJpR-bMcwU4tA7K4vBy-XI' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'dnt: 1' \
+  -H 'origin: https://marketplace.visualstudio.com' \
+  -H 'pragma: no-cache' \
+  -H 'referer: https://marketplace.visualstudio.com/' \
+  -H 'sec-ch-ua: "Microsoft Edge";v="105", " Not;A Brand";v="99", "Chromium";v="105"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: cross-site' \
+  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42' \
+  --data-raw '[{"Text":"How to use RapidAPI Client for VS Code to test APIs"},{"Text":"Generate API call snippets using the RapidAPI Client for VS Code extension"},{"Text":"Replace API Clients with VS Code using the Rapid API Extension"},{"Text":"API development in TypeScript using RapidAPI VSCode Client"},{"Text":"Auto generate interfaces from API Response using RapidAPI VSCode Client"},{"Text":"Telemetry"},{"Text":"RapidAPI collects usage data to improve our products and services. For information, you can read our <b10>privacy policy</b10> to find out what we collect."}]' \
+  --compressed

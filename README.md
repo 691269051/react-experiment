@@ -31,6 +31,13 @@ yarn add react@experimental react-dom@experimental
   ],
 ```
 
+## yarn
+
+```bash
+ yarn dlx @yarnpkg/sdks vscode
+ yarn plugin import interactive-tools
+```
+
 ## 备用依赖
 
 @hardfist/rematch

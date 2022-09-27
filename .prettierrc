@@ -1,22 +1,13 @@
 {
-  "trailingComma": "all",
-  "tabWidth": 4,
-  "printWidth": 120,
-  "semi": false,
-  "singleQuote": true,
-  "useTabs": false,
-  "endOfLine": "lf",
-  "overrides": [
-    {
-      "files": [
-        ".prettierrc",
-        ".*.json",
-        "*.json"
-      ],
-      "options": {
-        "printWidth": 20,
-        "tabWidth": 2
-      }
-    }
-  ]
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "endOfLine": "lf",
+    "overrides": [
+        {
+            "files": [".prettierrc", ".*.json", "*.json"],
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
 }

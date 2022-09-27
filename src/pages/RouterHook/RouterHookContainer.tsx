@@ -1,5 +1,5 @@
-import { Button } from 'antd'
-import React, { useState } from 'react'
+import { Button } from "antd";
+import React, { useState } from "react";
 import {
     Link,
     useNavigate,
@@ -7,14 +7,14 @@ import {
     useParams,
     useMatch,
     Outlet,
-} from 'react-router-dom'
-import useSWR from 'swr'
-import { ReactComponent as Excel } from './icon.svg'
+} from "react-router-dom";
+import useSWR from "swr";
+import { ReactComponent as Excel } from "./icon.svg";
 
 interface ILinkButton {
-    children: any
-    href: string
-    navigate: () => void
+    children: any;
+    href: string;
+    navigate: () => void;
 }
 
 const LinkButton: React.FC<ILinkButton> = ({ children, href, navigate }) => {
@@ -23,30 +23,30 @@ const LinkButton: React.FC<ILinkButton> = ({ children, href, navigate }) => {
         <Button href={href} onClick={navigate} type="primary">
             {children}
         </Button>
-    )
-}
+    );
+};
 const RouterHookContainer = () => {
-    const path = `/routerhooktest/${Math.random()}`
-    const { id } = useParams()
-    const location = useLocation()
-    const navigate = useNavigate()
-    const [num2, setNum2] = useState<number>(1)
+    const path = `/routerhooktest/${Math.random()}`;
+    const { id } = useParams();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [num2, setNum2] = useState<number>(1);
     const { data, isValidating, error } = useSWR(
-        'http://www.baidu.com',
+        "http://www.baidu.com",
         async (url) => {
             const data = await fetch(url)
                 .then((data) => {
-                    return data?.json()
+                    return data?.json();
                 })
                 .catch((error) => {
-                    console.log(error)
-                })
+                    console.log(error);
+                });
 
-            return data ?? null
+            return data ?? null;
         },
-        { suspense: true }
-    )
-    console.log(location, Outlet)
+        { suspense: true },
+    );
+    console.log(location, Outlet);
     return (
         <div>
             <Link to={path} replace={true}>
@@ -54,16 +54,16 @@ const RouterHookContainer = () => {
             </Link>
             id: {id}
             <div
-                style={{ color: 'red' }}
+                style={{ color: "red" }}
                 onClick={() => {
-                    setNum2((num2) => num2 + 1)
+                    setNum2((num2) => num2 + 1);
                 }}
             >
                 <Excel />
-                {num2}dd
+                {num2}ddd
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default RouterHookContainer
+export default RouterHookContainer;
