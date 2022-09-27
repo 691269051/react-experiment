@@ -3,17 +3,11 @@
   "typescript.suggest.paths": true,
   "javascript.suggest.paths": true,
   "git.ignoreLimitWarning": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.organizeImports": false
   },
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "css.customData": [
-    "./shi.css-data.json"
-  ],
-  "html.customData": [
-    "./node_modules/vscode-web-custom-data/data/browsers.html-data.json"
-  ],
   "commentTranslate.targetLanguage": "zh-CN",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "svg.preview.background": "black",
@@ -23,6 +17,6 @@
     "**/.pnp.*": true
   },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-"typescript.enablePromptUseWorkspaceTsdk": true,
-"files.eol": "\n"
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.eol": "\n"
 }
