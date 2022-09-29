@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [react(), svgr()],
     resolve: {
         alias: {
-            '@uw/rcnext': './src',
+            '@uw/rcnext': '/src',
         },
     },
     server: {

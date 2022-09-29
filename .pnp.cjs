@@ -36,8 +36,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-builder-react-jsx", "npm:7.19.0"],\
             ["@babel/helper-builder-react-jsx-experimental", "npm:7.12.11"],\
             ["@reduxjs/toolkit", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.8.5"],\
-            ["@rematch/core", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.2.0"],\
-            ["@rematch/immer", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.1.3"],\
             ["@svgr/rollup", "npm:6.3.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:13.4.0"],\
@@ -90,7 +88,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slate-history", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.66.0"],\
             ["slate-react", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.83.0"],\
             ["styled-components", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:5.3.5"],\
-            ["swr", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.3.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
             ["vite", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:3.1.3"],\
             ["vite-plugin-pwa", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.13.1"],\
@@ -2961,58 +2958,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@rematch/core", [\
-        ["npm:2.2.0", {\
-          "packageLocation": "./.yarn/cache/@rematch-core-npm-2.2.0-20b02e4f63-c2ae22b9c6.zip/node_modules/@rematch/core/",\
-          "packageDependencies": [\
-            ["@rematch/core", "npm:2.2.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/@rematch-core-virtual-0073fcb0af/0/cache/@rematch-core-npm-2.2.0-20b02e4f63-c2ae22b9c6.zip/node_modules/@rematch/core/",\
-          "packageDependencies": [\
-            ["@rematch/core", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.2.0"],\
-            ["@types/redux", null],\
-            ["redux", "npm:4.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/redux",\
-            "redux"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@rematch/immer", [\
-        ["npm:2.1.3", {\
-          "packageLocation": "./.yarn/cache/@rematch-immer-npm-2.1.3-d8a9302443-a6aa6cb197.zip/node_modules/@rematch/immer/",\
-          "packageDependencies": [\
-            ["@rematch/immer", "npm:2.1.3"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.1.3", {\
-          "packageLocation": "./.yarn/__virtual__/@rematch-immer-virtual-59ac761895/0/cache/@rematch-immer-npm-2.1.3-d8a9302443-a6aa6cb197.zip/node_modules/@rematch/immer/",\
-          "packageDependencies": [\
-            ["@rematch/immer", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.1.3"],\
-            ["@rematch/core", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.2.0"],\
-            ["@types/immer", null],\
-            ["@types/redux", null],\
-            ["@types/rematch__core", null],\
-            ["immer", "npm:9.0.15"],\
-            ["redux", "npm:4.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@rematch/core",\
-            "@types/immer",\
-            "@types/redux",\
-            "@types/rematch__core",\
-            "immer",\
-            "redux"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@remix-run/router", [\
         ["npm:1.0.1", {\
           "packageLocation": "./.yarn/cache/@remix-run-router-npm-1.0.1-b1aafc009e-c12a5c14e8.zip/node_modules/@remix-run/router/",\
@@ -3819,8 +3764,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/helper-builder-react-jsx", "npm:7.19.0"],\
             ["@babel/helper-builder-react-jsx-experimental", "npm:7.12.11"],\
             ["@reduxjs/toolkit", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.8.5"],\
-            ["@rematch/core", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.2.0"],\
-            ["@rematch/immer", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:2.1.3"],\
             ["@svgr/rollup", "npm:6.3.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:13.4.0"],\
@@ -3873,7 +3816,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slate-history", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.66.0"],\
             ["slate-react", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.83.0"],\
             ["styled-components", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:5.3.5"],\
-            ["swr", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.3.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
             ["vite", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:3.1.3"],\
             ["vite-plugin-pwa", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:0.13.1"],\
@@ -11025,28 +10967,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["csso", "npm:4.2.0"],\
             ["picocolors", "npm:1.0.0"],\
             ["stable", "npm:0.1.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["swr", [\
-        ["npm:1.3.0", {\
-          "packageLocation": "./.yarn/cache/swr-npm-1.3.0-3a8f9fadf5-e7a184f0d5.zip/node_modules/swr/",\
-          "packageDependencies": [\
-            ["swr", "npm:1.3.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.3.0", {\
-          "packageLocation": "./.yarn/__virtual__/swr-virtual-573fc9fa14/0/cache/swr-npm-1.3.0-3a8f9fadf5-e7a184f0d5.zip/node_modules/swr/",\
-          "packageDependencies": [\
-            ["swr", "virtual:a9571ff4f327f6d9c83ddba7efc14ee30e87fdc095d00bde49d0726a3429f56ac260fe4af3da0bf3116bd184cf82428cc32e8a9e5431d2888abd060b716b0732#npm:1.3.0"],\
-            ["@types/react", "npm:18.0.21"],\
-            ["react", "npm:18.2.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
           ],\
           "linkType": "HARD"\
         }]\
