@@ -36,6 +36,7 @@ yarn add react@experimental react-dom@experimental
 ```bash
  yarn dlx @yarnpkg/sdks vscode
  yarn plugin import interactive-tools
+ yarn set version latest
 ```
 
 ## 备用依赖
